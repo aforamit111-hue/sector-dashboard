@@ -2,20 +2,19 @@
 <html>
 <head>
     <title>Sector Dashboard</title>
-    <style>
-        body{
-            font-family:Arial;
-            background:#f4f4f4;
-            padding:20px;
-        }
+    .card{
+    background:white;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
 
-        .card{
-            background:white;
-            padding:15px;
-            margin-bottom:15px;
-            border-radius:10px;
-            box-shadow:0 0 5px rgba(0,0,0,0.2);
-        }
+body{
+    background:#f4f4f4;
+    font-family:Arial;
+    padding:20px;
+}
     </style>
 </head>
 <body>
@@ -26,60 +25,44 @@
 
 <script>
 
-const data = [
-{
-    sector:"IT",
-    score:90,
-    stocks:["TCS","INFY","HCLTECH"]
-},
-{
-    sector:"BANKING",
-    score:88,
-    stocks:["HDFCBANK","ICICIBANK","AXISBANK"]
-}
-];
-
-let html="";
-
-data.forEach(item=>{
-
-html += `
-<div class="card">
-<h2>${item.sector}</h2>
-<p>Score: ${item.score}</p>
-<ul>
-${item.stocks.map(stock=>`<li>${stock}</li>`).join("")}
-</ul>
-</div>
-`;
-
-});
-
-document.getElementById("dashboard").innerHTML = html;
-
-<script>
-
 fetch("sector_data.json")
 .then(response => response.json())
 .then(data => {
 
-let html="";
+let html = `
+<div class="card">
+<h2>📊 Market Health</h2>
+<h1>${data.market_health}%</h1>
+</div>
+`;
 
-data.forEach(item=>{
+data.sectors.forEach(item => {
 
 html += `
 <div class="card">
 <h2>${item.sector}</h2>
-<p>Score: ${item.score}</p>
+<p>Sector Score: ${item.score}</p>
+
 <ul>
-${item.stocks.map(stock=>`<li>${stock}</li>`).join("")}
+${item.stocks.map(stock =>
+`<li>
+<a href="https://www.google.com/search?q=${stock}+share+price"
+target="_blank">
+${stock}
+</a>
+</li>`).join("")}
 </ul>
+
 </div>
 `;
 
 });
 
 document.getElementById("dashboard").innerHTML = html;
+
+});
+
+</script>
 
 });
 
