@@ -4,116 +4,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nifty Stock Dashboard V2</title>
+
+<title>Nifty Dashboard V3</title>
 
 <style>
 
 *{
-    box-sizing:border-box;
+box-sizing:border-box;
 }
 
 body{
-    font-family:Arial,sans-serif;
-    margin:0;
-    padding:20px;
-    background:#f4f6f9;
+font-family:Arial,sans-serif;
+margin:0;
+padding:20px;
+background:#f4f6f9;
 }
 
 h1{
-    text-align:center;
-    margin-bottom:20px;
+text-align:center;
 }
 
 .card{
-    background:white;
-    padding:20px;
-    border-radius:12px;
-    margin-bottom:20px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:12px;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
 .summary{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
 }
 
 .summary-box{
-    flex:1;
-    min-width:200px;
-    background:#007bff;
-    color:white;
-    padding:15px;
-    border-radius:10px;
-    text-align:center;
+flex:1;
+min-width:200px;
+background:#007bff;
+color:white;
+padding:15px;
+border-radius:10px;
+text-align:center;
 }
 
 .summary-box h2{
-    margin:0;
-    font-size:32px;
+margin:0;
+font-size:30px;
 }
 
 #sectorCards{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
+display:flex;
+flex-wrap:wrap;
+gap:10px;
 }
 
 .sector-card{
-    background:white;
-    border-left:5px solid #007bff;
-    padding:12px;
-    border-radius:8px;
-    cursor:pointer;
-    min-width:180px;
-    box-shadow:0 1px 5px rgba(0,0,0,0.1);
+background:white;
+border-left:5px solid #007bff;
+padding:12px;
+border-radius:8px;
+cursor:pointer;
+min-width:180px;
+box-shadow:0 1px 5px rgba(0,0,0,.1);
 }
 
 .sector-card:hover{
-    transform:scale(1.03);
+transform:scale(1.03);
 }
 
 .filters{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
 }
 
-input,select{
-    padding:10px;
-    border:1px solid #ddd;
-    border-radius:6px;
+input,select,button{
+padding:10px;
+border:1px solid #ddd;
+border-radius:6px;
 }
 
-input{
-    flex:1;
-    min-width:250px;
+button{
+background:#007bff;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#0056b3;
 }
 
 table{
-    width:100%;
-    border-collapse:collapse;
+width:100%;
+border-collapse:collapse;
 }
 
 th,td{
-    border:1px solid #ddd;
-    padding:10px;
+border:1px solid #ddd;
+padding:10px;
 }
 
 th{
-    background:#007bff;
-    color:white;
+background:#007bff;
+color:white;
+cursor:pointer;
 }
 
 tr:nth-child(even){
-    background:#f9f9f9;
+background:#f9f9f9;
 }
 
 tr:hover{
-    background:#eef5ff;
+background:#eef5ff;
+}
+
+.rank{
+font-size:18px;
+padding:8px;
+margin:6px 0;
+background:#f5f5f5;
+border-radius:6px;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -123,14 +138,22 @@ tr:hover{
 <div class="summary">
 
 <div class="summary-box">
-    <p>Total Stocks</p>
-    <h2 id="stockCount">0</h2>
+<p>Total Stocks</p>
+<h2 id="stockCount">0</h2>
 </div>
 
 <div class="summary-box">
-    <p>Total Sectors</p>
-    <h2 id="sectorCount">0</h2>
+<p>Total Sectors</p>
+<h2 id="sectorCount">0</h2>
 </div>
+
+</div>
+
+<div class="card">
+
+<h2>🏆 Top Sectors</h2>
+
+<div id="topSectors"></div>
 
 </div>
 
@@ -158,6 +181,10 @@ id="searchBox"
 placeholder="Search Stock..."
 onkeyup="applyFilters()">
 
+<button onclick="clearFilters()">
+Clear Filters
+</button>
+
 </div>
 
 <br>
@@ -165,11 +192,13 @@ onkeyup="applyFilters()">
 <table>
 
 <thead>
+
 <tr>
-<th>Stock</th>
-<th>Sector</th>
-<th>Score</th>
+<th onclick="sortTable('symbol')">Stock ▲▼</th>
+<th onclick="sortTable('sector')">Sector ▲▼</th>
+<th onclick="sortTable('score')">Score ▲▼</th>
 </tr>
+
 </thead>
 
 <tbody id="tableBody"></tbody>
@@ -181,9 +210,10 @@ onkeyup="applyFilters()">
 <script>
 
 let allStocks=[];
+let currentSort="symbol";
 
 fetch("stocks.json")
-.then(response=>response.json())
+.then(res=>res.json())
 .then(data=>{
 
 allStocks=data;
@@ -191,9 +221,9 @@ allStocks=data;
 document.getElementById("stockCount").innerText=
 data.length;
 
-const sectors=[...new Set(
-data.map(stock=>stock.sector)
-)];
+const sectors=[
+...new Set(data.map(x=>x.sector))
+];
 
 document.getElementById("sectorCount").innerText=
 sectors.length;
@@ -201,6 +231,8 @@ sectors.length;
 populateDropdown(sectors);
 
 createSectorCards(data);
+
+createTopSectors(data);
 
 renderTable(data);
 
@@ -225,38 +257,70 @@ ${sector}
 
 function createSectorCards(data){
 
-const sectorCounts={};
+const counts={};
 
 data.forEach(stock=>{
 
-sectorCounts[stock.sector]=
-(sectorCounts[stock.sector]||0)+1;
+counts[stock.sector]=
+(counts[stock.sector]||0)+1;
 
 });
 
 let html="";
 
-Object.entries(sectorCounts)
+Object.entries(counts)
 .sort((a,b)=>b[1]-a[1])
 .forEach(([sector,count])=>{
 
 html+=`
-
 <div
 class="sector-card"
 onclick="selectSector('${sector}')">
 
 <h3>${sector}</h3>
-
 <p>${count} Stocks</p>
 
 </div>
-
 `;
 
 });
 
 document.getElementById("sectorCards")
+.innerHTML=html;
+
+}
+
+function createTopSectors(data){
+
+const counts={};
+
+data.forEach(stock=>{
+
+counts[stock.sector]=
+(counts[stock.sector]||0)+1;
+
+});
+
+let html="";
+
+Object.entries(counts)
+.sort((a,b)=>b[1]-a[1])
+.slice(0,5)
+.forEach(([sector,count],index)=>{
+
+html+=`
+<div class="rank">
+#${index+1}
+&nbsp;
+${sector}
+&nbsp;
+(${count} Stocks)
+</div>
+`;
+
+});
+
+document.getElementById("topSectors")
 .innerHTML=html;
 
 }
@@ -295,20 +359,33 @@ document.getElementById("sectorFilter")
 const filtered=
 allStocks.filter(stock=>{
 
-const matchSearch=
+const searchMatch=
 stock.symbol
 .toUpperCase()
 .includes(search);
 
-const matchSector=
+const sectorMatch=
 sector==="All" ||
 stock.sector===sector;
 
-return matchSearch && matchSector;
+return searchMatch &&
+sectorMatch;
 
 });
 
 renderTable(filtered);
+
+}
+
+function clearFilters(){
+
+document.getElementById("searchBox")
+.value="";
+
+document.getElementById("sectorFilter")
+.value="All";
+
+renderTable(allStocks);
 
 }
 
@@ -318,6 +395,23 @@ document.getElementById("sectorFilter")
 .value=sector;
 
 applyFilters();
+
+}
+
+function sortTable(field){
+
+allStocks.sort((a,b)=>{
+
+if(field==="score"){
+return b.score-a.score;
+}
+
+return String(a[field])
+.localeCompare(String(b[field]));
+
+});
+
+renderTable(allStocks);
 
 }
 
