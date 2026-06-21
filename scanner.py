@@ -1,4 +1,3 @@
-```python
 import json
 
 # Read stocks.json
@@ -20,4 +19,3 @@ for stock in stocks[:10]:
 
 print("-" * 50)
 print("Scanner completed successfully.")
-```
