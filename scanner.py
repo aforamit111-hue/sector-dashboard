@@ -221,6 +221,11 @@ for stock in stocks:
         )
 
 # -------------------------
+# TEST
+# -------------------------
+stocks[0]["debug"] = "HELLO_AMIT"
+
+# -------------------------
 # Save JSON
 # -------------------------
 with open("stocks.json", "w", encoding="utf-8") as f:
