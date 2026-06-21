@@ -1,6 +1,13 @@
 {
   "market_health": 78,
   "last_updated": "21-Jun-2026 6:00 PM",
+  "top_stocks": [
+  "TRENT",
+  "SIEMENS",
+  "TCS",
+  "M&M",
+  "HDFCBANK"
+],
   "sectors": [
     {
       "sector": "IT",
