@@ -1,18 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Top 5 Sectors</title>
+    <title>Sector Dashboard</title>
+    <style>
+        body{
+            font-family:Arial;
+            background:#f4f4f4;
+            padding:20px;
+        }
+
+        .card{
+            background:white;
+            padding:15px;
+            margin-bottom:15px;
+            border-radius:10px;
+            box-shadow:0 0 5px rgba(0,0,0,0.2);
+        }
+    </style>
 </head>
 <body>
 
-<h1>Top 5 Sectors</h1>
+<h1>📈 Top 5 Strongest Sectors</h1>
 
-<h2>IT</h2>
+<div id="dashboard"></div>
+
+<script>
+
+const data = [
+{
+    sector:"IT",
+    score:90,
+    stocks:["TCS","INFY","HCLTECH"]
+},
+{
+    sector:"BANKING",
+    score:88,
+    stocks:["HDFCBANK","ICICIBANK","AXISBANK"]
+}
+];
+
+let html="";
+
+data.forEach(item=>{
+
+html += `
+<div class="card">
+<h2>${item.sector}</h2>
+<p>Score: ${item.score}</p>
 <ul>
-<li>TCS</li>
-<li>INFY</li>
-<li>HCLTECH</li>
+${item.stocks.map(stock=>`<li>${stock}</li>`).join("")}
 </ul>
+</div>
+`;
+
+});
+
+document.getElementById("dashboard").innerHTML = html;
+
+</script>
 
 </body>
 </html>
