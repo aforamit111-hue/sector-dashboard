@@ -3,123 +3,604 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nifty Dashboard V4</title>
-<style>
-:root{
---bg:#f4f6f9;--card:#fff;--text:#222;--primary:#007bff;
-}
-.dark{
---bg:#121212;--card:#1e1e1e;--text:#f5f5f5;--primary:#4da3ff;
-}
-body{font-family:Arial,sans-serif;background:var(--bg);color:var(--text);padding:20px;margin:0}
-.card{background:var(--card);padding:20px;border-radius:12px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
-.summary{display:flex;gap:10px;flex-wrap:wrap}
-.summary .card{flex:1;min-width:180px}
-button,select,input{padding:10px;border-radius:6px;border:1px solid #ccc}
-table{width:100%;border-collapse:collapse}
-th,td{border:1px solid #ddd;padding:8px}
-th{background:var(--primary);color:white;position:sticky;top:0}
-.sector-card{display:inline-block;margin:5px;padding:10px;background:var(--card);border-left:4px solid var(--primary);cursor:pointer}
-</style>
-</head>
-<body>
-<h1>📈 Nifty Dashboard V4</h1>
 
-<button onclick="toggleDarkMode()">🌙 Dark Mode</button>
-<button onclick="exportCSV()">📁 Export CSV</button>
+<title>Nifty Dashboard V6</title>
+
+<style>
+
+:root{
+--bg:#f4f6f9;
+--card:#ffffff;
+--text:#222;
+--primary:#007bff;
+}
+
+.dark{
+--bg:#121212;
+--card:#1e1e1e;
+--text:#f5f5f5;
+--primary:#4da3ff;
+}
+
+*{
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+margin:0;
+padding:20px;
+background:var(--bg);
+color:var(--text);
+}
+
+h1{
+text-align:center;
+}
+
+.card{
+background:var(--card);
+padding:20px;
+margin-bottom:20px;
+border-radius:12px;
+box-shadow:0 2px 10px rgba(0,0,0,.15);
+}
+
+.summary{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.summary .card{
+flex:1;
+min-width:180px;
+text-align:center;
+}
+
+button,
+select,
+input{
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+cursor:pointer;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,
+td{
+border:1px solid #ddd;
+padding:8px;
+text-align:center;
+}
+
+th{
+background:var(--primary);
+color:white;
+position:sticky;
+top:0;
+}
+
+tr:hover{
+background:#eef5ff;
+}
+
+.sector-card{
+display:inline-block;
+margin:5px;
+padding:10px;
+background:var(--card);
+border-left:4px solid var(--primary);
+cursor:pointer;
+border-radius:8px;
+}
+
+.green{
+background:#c8f7c5;
+font-weight:bold;
+}
+
+.yellow{
+background:#fff3cd;
+font-weight:bold;
+}
+
+.red{
+background:#f8d7da;
+font-weight:bold;
+}
+
+.panel{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.panel-box{
+background:var(--card);
+padding:12px;
+border-radius:8px;
+flex:1;
+min-width:250px;
+}
+
+.rank-item{
+padding:6px;
+border-bottom:1px solid #ddd;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>📈 Nifty Dashboard V6</h1>
+
+<button onclick="toggleDarkMode()">
+🌙 Dark Mode
+</button>
+
+<button onclick="exportCSV()">
+📁 Export CSV
+</button>
 
 <div class="summary">
-<div class="card"><h3>Total Stocks</h3><h2 id="stockCount">0</h2></div>
-<div class="card"><h3>Total Sectors</h3><h2 id="sectorCount">0</h2></div>
-<div class="card"><h3>Visible Stocks</h3><h2 id="visibleCount">0</h2></div>
+
+<div class="card">
+<h3>Total Stocks</h3>
+<h2 id="stockCount">0</h2>
 </div>
 
 <div class="card">
+<h3>Total Sectors</h3>
+<h2 id="sectorCount">0</h2>
+</div>
+
+<div class="card">
+<h3>Visible Stocks</h3>
+<h2 id="visibleCount">0</h2>
+</div>
+
+<div class="card">
+<h3>🚀 BTST</h3>
+<h2 id="btstCount">0</h2>
+</div>
+
+<div class="card">
+<h3>📈 Swing</h3>
+<h2 id="swingCount">0</h2>
+</div>
+
+<div class="card">
+<h3>🔥 Hilega</h3>
+<h2 id="hilegaCount">0</h2>
+</div>
+
+</div>
+
+<div class="panel">
+
+<div class="panel-box">
+<h3>🏆 Top Stocks</h3>
+<div id="topStocks"></div>
+</div>
+
+<div class="panel-box">
+<h3>🚀 BTST Candidates</h3>
+<div id="topBtst"></div>
+</div>
+
+<div class="panel-box">
+<h3>📈 Swing Candidates</h3>
+<div id="topSwing"></div>
+</div>
+
+</div>
+
+<div class="card">
+
 <h2>📊 Sector Cards</h2>
+
 <div id="sectorCards"></div>
+
 </div>
 
 <div class="card">
-<select id="sectorFilter" onchange="applyFilters()"><option value="All">All Sectors</option></select>
-<input id="searchBox" placeholder="Search Stock" onkeyup="applyFilters()">
+
+<select id="sectorFilter" onchange="applyFilters()">
+
+<option value="All">
+All Sectors
+</option>
+
+</select>
+
+<input
+id="searchBox"
+placeholder="Search Stock"
+onkeyup="applyFilters()">
+
 </div>
 
 <div class="card">
+
 <table>
-<thead>
-<tr><th>⭐</th><th>Stock</th><th>Sector</th><th>Score</th></tr>
-</thead>
-<tbody id="tableBody"></tbody>
-</table>
-</div>
 
+<thead>
+
+<tr>
+
+<th>⭐</th>
+<th>Stock</th>
+<th>Sector</th>
+<th>Price</th>
+<th>RSI</th>
+<th>EMA3</th>
+<th>WMA21</th>
+<th>Vol Ratio</th>
+<th>Score</th>
+<th>BTST</th>
+<th>Swing</th>
+<th>Signal</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tableBody"></tbody>
+
+</table>
+
+</div>
+  
 <script>
+
 let allStocks=[];
 
 fetch('stocks.json')
 .then(r=>r.json())
 .then(data=>{
+
 allStocks=data;
-document.getElementById('stockCount').innerText=data.length;
-document.getElementById('visibleCount').innerText=data.length;
 
-const sectors=[...new Set(data.map(x=>x.sector))];
-document.getElementById('sectorCount').innerText=sectors.length;
+document.getElementById('stockCount').innerText=
+data.length;
 
-const dd=document.getElementById('sectorFilter');
-sectors.sort().forEach(s=>dd.innerHTML+=`<option>${s}</option>`);
+document.getElementById('visibleCount').innerText=
+data.length;
+
+const sectors=[
+...new Set(data.map(x=>x.sector))
+];
+
+document.getElementById('sectorCount').innerText=
+sectors.length;
+
+document.getElementById('btstCount').innerText=
+data.filter(x=>x.btst_candidate).length;
+
+document.getElementById('swingCount').innerText=
+data.filter(x=>x.swing_candidate).length;
+
+document.getElementById('hilegaCount').innerText=
+data.filter(x=>x.hilega_milega).length;
+
+const dd=
+document.getElementById('sectorFilter');
+
+sectors
+.sort()
+.forEach(s=>{
+
+dd.innerHTML+=`
+<option value="${s}">
+${s}
+</option>
+`;
+
+});
 
 let cards='';
-sectors.forEach(s=>cards+=`<div class="sector-card" onclick="pickSector('${s}')">${s}</div>`);
-document.getElementById('sectorCards').innerHTML=cards;
+
+sectors.forEach(s=>{
+
+cards+=`
+<div
+class="sector-card"
+onclick="pickSector('${s}')">
+
+${s}
+
+</div>
+`;
+
+});
+
+document.getElementById('sectorCards')
+.innerHTML=cards;
+
+buildTopPanels(data);
 
 renderTable(data);
+
 });
 
+function buildTopPanels(data){
+
+const topStocks=
+[...data]
+.sort((a,b)=>b.score-a.score)
+.slice(0,10);
+
+document.getElementById('topStocks')
+.innerHTML=
+
+topStocks.map(x=>
+
+`<div class="rank-item">
+
+${x.symbol}
+
+(Score ${x.score})
+
+</div>`
+
+).join('');
+
+const btst=
+data.filter(x=>x.btst_candidate)
+.slice(0,10);
+
+document.getElementById('topBtst')
+.innerHTML=
+
+btst.map(x=>
+
+`<div class="rank-item">
+
+${x.symbol}
+
+</div>`
+
+).join('');
+
+const swing=
+data.filter(x=>x.swing_candidate)
+.slice(0,10);
+
+document.getElementById('topSwing')
+.innerHTML=
+
+swing.map(x=>
+
+`<div class="rank-item">
+
+${x.symbol}
+
+</div>`
+
+).join('');
+
+}
+
 function renderTable(data){
-document.getElementById('visibleCount').innerText=data.length;
+
+document.getElementById('visibleCount')
+.innerText=data.length;
+
 let html='';
+
 data.forEach(stock=>{
-html+=`<tr>
-<td>${stock.watchlist?'⭐':'☆'}</td>
-<td>${stock.symbol}</td>
-<td>${stock.sector}</td>
-<td>${stock.score}</td>
-</tr>`;
+
+let scoreClass='red';
+
+if(stock.score>=80){
+scoreClass='green';
+}
+else if(stock.score>=60){
+scoreClass='yellow';
+}
+
+html+=`
+
+<tr>
+
+<td>
+
+${stock.watchlist?'⭐':'☆'}
+
+</td>
+
+<td>
+
+${stock.symbol}
+
+</td>
+
+<td>
+
+${stock.sector}
+
+</td>
+
+<td>
+
+${stock.price ?? '-'}
+
+</td>
+
+<td>
+
+${stock.rsi ?? '-'}
+
+</td>
+
+<td>
+
+${stock.rsi_ema3 ?? '-'}
+
+</td>
+
+<td>
+
+${stock.rsi_wma21 ?? '-'}
+
+</td>
+
+<td>
+
+${stock.volume_ratio ?? '-'}
+
+</td>
+
+<td class="${scoreClass}">
+
+${stock.score}
+
+</td>
+
+<td>
+
+${stock.btst_candidate?'🚀':''}
+
+</td>
+
+<td>
+
+${stock.swing_candidate?'📈':''}
+
+</td>
+
+<td>
+
+${stock.hilega_milega?'🔥':''}
+
+</td>
+
+</tr>
+
+`;
+
 });
-document.getElementById('tableBody').innerHTML=html;
+
+document.getElementById('tableBody')
+.innerHTML=html;
+
 }
 
 function applyFilters(){
-const s=document.getElementById('searchBox').value.toUpperCase();
-const sec=document.getElementById('sectorFilter').value;
 
-const filtered=allStocks.filter(x=>
-(sec==='All'||x.sector===sec) &&
-x.symbol.toUpperCase().includes(s)
+const search=
+document.getElementById('searchBox')
+.value
+.toUpperCase();
+
+const sec=
+document.getElementById('sectorFilter')
+.value;
+
+const filtered=
+
+allStocks.filter(x=>
+
+(sec==='All' ||
+x.sector===sec)
+
+&&
+
+x.symbol
+.toUpperCase()
+.includes(search)
+
 );
+
 renderTable(filtered);
+
 }
 
 function pickSector(sec){
-document.getElementById('sectorFilter').value=sec;
+
+document.getElementById('sectorFilter')
+.value=sec;
+
 applyFilters();
+
 }
 
 function toggleDarkMode(){
-document.body.classList.toggle('dark');
+
+document.body.classList
+.toggle('dark');
+
 }
 
 function exportCSV(){
-let rows=[["Symbol","Sector","Score"]];
-allStocks.forEach(x=>rows.push([x.symbol,x.sector,x.score]));
-let csv=rows.map(r=>r.join(",")).join("\n");
-let blob=new Blob([csv],{type:'text/csv'});
-let a=document.createElement('a');
-a.href=URL.createObjectURL(blob);
+
+let rows=[
+
+[
+"Symbol",
+"Sector",
+"Price",
+"RSI",
+"EMA3",
+"WMA21",
+"Volume Ratio",
+"Score"
+]
+
+];
+
+allStocks.forEach(x=>
+
+rows.push([
+
+x.symbol,
+x.sector,
+x.price,
+x.rsi,
+x.rsi_ema3,
+x.rsi_wma21,
+x.volume_ratio,
+x.score
+
+])
+
+);
+
+let csv=
+rows
+.map(r=>r.join(","))
+.join("\n");
+
+let blob=
+new Blob(
+[csv],
+{type:'text/csv'}
+);
+
+let a=
+document.createElement('a');
+
+a.href=
+URL.createObjectURL(blob);
+
 a.download='stocks.csv';
+
 a.click();
+
 }
+
 </script>
+
 </body>
 </html>
