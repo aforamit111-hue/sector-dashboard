@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Sector Dashboard</title>
-    .card{
+<title>Sector Dashboard</title>
+
+<style>
+
+.card{
     background:white;
     padding:15px;
     margin-bottom:15px;
@@ -15,8 +19,11 @@ body{
     font-family:Arial;
     padding:20px;
 }
-    </style>
+
+</style>
+
 </head>
+
 <body>
 
 <h1>📈 Top 5 Strongest Sectors</h1>
@@ -30,7 +37,6 @@ fetch("sector_data.json")
 .then(data => {
 
 let html = `
-html = `
 <div class="card">
 <h2>📊 Market Health</h2>
 <h1>${data.market_health}%</h1>
@@ -47,34 +53,15 @@ html += `
 
 <ul>
 ${item.stocks.map(stock =>
-`<li>
-<a href="https://www.google.com/search?q=${stock}+share+price"
-target="_blank">
-${stock}
-</a>
-</li>`).join("")}
-</ul>
-
-</div>
-`;
-
-});
-html += `
-<div class="card">
-<h2>🏆 Top Stocks Overall</h2>
-
-<ul>
-${data.top_stocks.map(stock =>
 `<li>${stock}</li>`).join("")}
 </ul>
 
 </div>
 `;
-document.getElementById("dashboard").innerHTML = html;
 
 });
 
-</script>
+document.getElementById("dashboard").innerHTML = html;
 
 });
 
