@@ -6,8 +6,6 @@ workflow_dispatch:
 jobs:
 scan:
 runs-on: ubuntu-latest
-
-```
 permissions:
   contents: write
 
