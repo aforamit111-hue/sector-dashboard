@@ -59,7 +59,17 @@ ${stock}
 `;
 
 });
+html += `
+<div class="card">
+<h2>🏆 Top Stocks Overall</h2>
 
+<ul>
+${data.top_stocks.map(stock =>
+`<li>${stock}</li>`).join("")}
+</ul>
+
+</div>
+`;
 document.getElementById("dashboard").innerHTML = html;
 
 });
