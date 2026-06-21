@@ -27,13 +27,20 @@ jobs:
         run: |
           python scanner.py
 
+      
       - name: Commit Updated Data
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
 
+          echo "=== GIT STATUS BEFORE ==="
+          git status
+
           git add stocks.json
 
-          git diff --staged --quiet || git commit -m "Auto update market data"
+          echo "=== GIT STATUS AFTER ==="
+          git status
+
+          git commit -m "Auto update market data" || echo "No changes to commit"
 
           git push
