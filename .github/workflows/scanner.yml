@@ -1,0 +1,28 @@
+name: Scanner
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  scan:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Libraries
+        run: |
+          pip install yfinance pandas
+
+      - name: Run Scanner
+        run: |
+          python scanner.py
