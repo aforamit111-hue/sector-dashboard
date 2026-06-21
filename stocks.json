@@ -3,331 +3,386 @@
     "symbol": "ABB.NS",
     "sector": "Capital Goods",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 7248.0
   },
   {
     "symbol": "ACC.NS",
     "sector": "Cement",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1343.3
   },
   {
     "symbol": "APLAPOLLO.NS",
     "sector": "Steel",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1871.6
   },
   {
     "symbol": "AUBANK.NS",
     "sector": "Banking",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1033.05
   },
   {
     "symbol": "ADANIENT.NS",
     "sector": "Infrastructure",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 3038.4
   },
   {
     "symbol": "ADANIPORTS.NS",
     "sector": "Infrastructure",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1835.3
   },
   {
     "symbol": "ALKEM.NS",
     "sector": "Pharma",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 5373.5
   },
   {
     "symbol": "AMBUJACEM.NS",
     "sector": "Cement",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 423.95
   },
   {
     "symbol": "APOLLOHOSP.NS",
     "sector": "Healthcare",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 8489.5
   },
   {
     "symbol": "ASHOKLEY.NS",
     "sector": "Auto",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 156.66
   },
   {
     "symbol": "ASIANPAINT.NS",
     "sector": "Chemicals",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 2732.9
   },
   {
     "symbol": "ASTRAL.NS",
     "sector": "Building Materials",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1542.1
   },
   {
     "symbol": "ATUL.NS",
     "sector": "Chemicals",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 6482.0
   },
   {
     "symbol": "AUROPHARMA.NS",
     "sector": "Pharma",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1497.8
   },
   {
     "symbol": "AXISBANK.NS",
     "sector": "Banking",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1357.9
   },
   {
     "symbol": "BAJAJ-AUTO.NS",
     "sector": "Auto",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 10066.0
   },
   {
     "symbol": "BAJFINANCE.NS",
     "sector": "Financial Services",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 961.8
   },
   {
     "symbol": "BAJAJFINSV.NS",
     "sector": "Financial Services",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1769.4
   },
   {
     "symbol": "BALKRISIND.NS",
     "sector": "Tyres",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 2243.7
   },
   {
     "symbol": "BALRAMCHIN.NS",
     "sector": "Sugar",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 531.6
   },
   {
     "symbol": "BANDHANBNK.NS",
     "sector": "Banking",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 208.09
   },
   {
     "symbol": "BANKBARODA.NS",
     "sector": "Banking",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 281.05
   },
   {
     "symbol": "BEL.NS",
     "sector": "Defence",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 426.9
   },
   {
     "symbol": "BERGEPAINT.NS",
     "sector": "Chemicals",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 550.7
   },
   {
     "symbol": "BHARATFORG.NS",
     "sector": "Capital Goods",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 2041.4
   },
   {
     "symbol": "BHARTIARTL.NS",
     "sector": "Telecom",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1910.8
   },
   {
     "symbol": "BHEL.NS",
     "sector": "Capital Goods",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 414.35
   },
   {
     "symbol": "BIOCON.NS",
     "sector": "Pharma",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 415.5
   },
   {
     "symbol": "BOSCHLTD.NS",
     "sector": "Auto Ancillary",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 40195.0
   },
   {
     "symbol": "BPCL.NS",
     "sector": "Oil & Gas",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 306.6
   },
   {
     "symbol": "BRITANNIA.NS",
     "sector": "Consumer",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 5195.0
   },
   {
     "symbol": "CGPOWER.NS",
     "sector": "Capital Goods",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 963.7
   },
   {
     "symbol": "CANBK.NS",
     "sector": "Banking",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 133.74
   },
   {
     "symbol": "CHAMBLFERT.NS",
     "sector": "Chemicals",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 484.2
   },
   {
     "symbol": "CHOLAFIN.NS",
     "sector": "Financial Services",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1693.4
   },
   {
     "symbol": "CIPLA.NS",
     "sector": "Pharma",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1351.8
   },
   {
     "symbol": "COALINDIA.NS",
     "sector": "Mining",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 451.3
   },
   {
     "symbol": "COFORGE.NS",
     "sector": "IT",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1463.3
   },
   {
     "symbol": "COLPAL.NS",
     "sector": "Consumer",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1997.8
   },
   {
     "symbol": "CONCOR.NS",
     "sector": "Logistics",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 471.75
   },
   {
     "symbol": "CROMPTON.NS",
     "sector": "Consumer Durables",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 275.25
   },
   {
     "symbol": "CUMMINSIND.NS",
     "sector": "Capital Goods",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 5865.0
   },
   {
     "symbol": "DABUR.NS",
     "sector": "Consumer",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 423.5
   },
   {
     "symbol": "DALBHARAT.NS",
     "sector": "Cement",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1717.2
   },
   {
     "symbol": "DEEPAKNTR.NS",
     "sector": "Chemicals",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1644.4
   },
   {
     "symbol": "DIVISLAB.NS",
     "sector": "Pharma",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 6743.0
   },
   {
     "symbol": "DIXON.NS",
     "sector": "Electronics",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 12517.0
   },
   {
     "symbol": "DLF.NS",
     "sector": "Real Estate",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 624.5
   },
   {
     "symbol": "DRREDDY.NS",
     "sector": "Pharma",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1272.1
   },
   {
     "symbol": "EICHERMOT.NS",
     "sector": "Auto",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 7611.0
   },
   {
     "symbol": "ESCORTS.NS",
     "sector": "Capital Goods",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 2821.2
   },
   {
     "symbol": "EXIDEIND.NS",
     "sector": "Batteries",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 380.75
   },
   {
     "symbol": "FEDERALBNK.NS",
     "sector": "Banking",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 323.95
   },
   {
     "symbol": "GAIL.NS",
     "sector": "Oil & Gas",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 173.9
   },
   {
     "symbol": "GLENMARK.NS",
     "sector": "Pharma",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 2213.6
   },
   {
     "symbol": "GMRINFRA.NS",
@@ -339,253 +394,295 @@
     "symbol": "GNFC.NS",
     "sector": "Chemicals",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 567.65
   },
   {
     "symbol": "GODREJCP.NS",
     "sector": "Consumer",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1000.6
   },
   {
     "symbol": "GODREJPROP.NS",
     "sector": "Real Estate",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1795.9
   },
   {
     "symbol": "GRANULES.NS",
     "sector": "Pharma",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 786.9
   },
   {
     "symbol": "GRASIM.NS",
     "sector": "Cement",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 3149.5
   },
   {
     "symbol": "GUJGASLTD.NS",
     "sector": "Gas Distribution",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 388.45
   },
   {
     "symbol": "HAL.NS",
     "sector": "Defence",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 4408.1
   },
   {
     "symbol": "HAVELLS.NS",
     "sector": "Consumer Durables",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1176.3
   },
   {
     "symbol": "HCLTECH.NS",
     "sector": "IT",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1131.7
   },
   {
     "symbol": "HDFCAMC.NS",
     "sector": "Financial Services",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 2719.0
   },
   {
     "symbol": "HDFCBANK.NS",
     "sector": "Banking",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 779.8
   },
   {
     "symbol": "HDFCLIFE.NS",
     "sector": "Insurance",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 591.85
   },
   {
     "symbol": "HEROMOTOCO.NS",
     "sector": "Auto",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 4974.9
   },
   {
     "symbol": "HINDALCO.NS",
     "sector": "Metals",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1010.0
   },
   {
     "symbol": "HINDCOPPER.NS",
     "sector": "Metals",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 511.15
   },
   {
     "symbol": "HINDPETRO.NS",
     "sector": "Oil & Gas",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 392.1
   },
   {
     "symbol": "HINDUNILVR.NS",
     "sector": "Consumer",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 2194.6
   },
   {
     "symbol": "ICICIBANK.NS",
     "sector": "Banking",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1346.5
   },
   {
     "symbol": "ICICIGI.NS",
     "sector": "Insurance",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1870.1
   },
   {
     "symbol": "ICICIPRULI.NS",
     "sector": "Insurance",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 500.3
   },
   {
     "symbol": "IDEA.NS",
     "sector": "Telecom",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 14.92
   },
   {
     "symbol": "IDFCFIRSTB.NS",
     "sector": "Banking",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 78.68
   },
   {
     "symbol": "IEX.NS",
     "sector": "Exchange",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 122.78
   },
   {
     "symbol": "IGL.NS",
     "sector": "Gas Distribution",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 167.6
   },
   {
     "symbol": "INDHOTEL.NS",
     "sector": "Hotels",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 724.75
   },
   {
     "symbol": "INDIAMART.NS",
     "sector": "Internet",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 2089.4
   },
   {
     "symbol": "INDIGO.NS",
     "sector": "Aviation",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 5021.5
   },
   {
     "symbol": "INDUSINDBK.NS",
     "sector": "Banking",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 947.45
   },
   {
     "symbol": "INDUSTOWER.NS",
     "sector": "Telecom Infrastructure",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 411.2
   },
   {
     "symbol": "INFY.NS",
     "sector": "IT",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1051.4
   },
   {
     "symbol": "IOC.NS",
     "sector": "Oil & Gas",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 143.43
   },
   {
     "symbol": "IRCTC.NS",
     "sector": "Railways",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 519.6
   },
   {
     "symbol": "JINDALSTEL.NS",
     "sector": "Metals",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1137.7
   },
   {
     "symbol": "JKCEMENT.NS",
     "sector": "Cement",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 5503.5
   },
   {
     "symbol": "JSWENERGY.NS",
     "sector": "Power",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 570.1
   },
   {
     "symbol": "JSWSTEEL.NS",
     "sector": "Metals",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1287.7
   },
   {
     "symbol": "JUBLFOOD.NS",
     "sector": "Consumer",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 419.0
   },
   {
     "symbol": "KOTAKBANK.NS",
     "sector": "Banking",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 399.25
   },
   {
     "symbol": "LALPATHLAB.NS",
     "sector": "Healthcare",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1635.8
   },
   {
     "symbol": "LAURUSLABS.NS",
     "sector": "Pharma",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1412.9
   },
   {
     "symbol": "LICHSGFIN.NS",
     "sector": "Financial Services",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 549.9
   },
   {
     "symbol": "LT.NS",
     "sector": "Capital Goods",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 4209.4
   },
   {
     "symbol": "LTIM.NS",
@@ -597,133 +694,155 @@
     "symbol": "LTTS.NS",
     "sector": "IT",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 3331.2
   },
   {
     "symbol": "LUPIN.NS",
     "sector": "Pharma",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 2351.6
   },
   {
     "symbol": "M&M.NS",
     "sector": "Auto",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 3074.8
   },
   {
     "symbol": "MANAPPURAM.NS",
     "sector": "Financial Services",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 318.65
   },
   {
     "symbol": "MARICO.NS",
     "sector": "Consumer",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 817.05
   },
   {
     "symbol": "MARUTI.NS",
     "sector": "Auto",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 13395.0
   },
   {
     "symbol": "MCX.NS",
     "sector": "Exchange",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 2803.8
   },
   {
     "symbol": "METROPOLIS.NS",
     "sector": "Healthcare",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 552.75
   },
   {
     "symbol": "MGL.NS",
     "sector": "Gas Distribution",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1209.0
   },
   {
     "symbol": "MOTHERSON.NS",
     "sector": "Auto Ancillary",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 145.54
   },
   {
     "symbol": "MPHASIS.NS",
     "sector": "IT",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 2267.5
   },
   {
     "symbol": "MRF.NS",
     "sector": "Tyres",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 128645.0
   },
   {
     "symbol": "MUTHOOTFIN.NS",
     "sector": "Financial Services",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 3126.1
   },
   {
     "symbol": "NAUKRI.NS",
     "sector": "Internet",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 984.25
   },
   {
     "symbol": "NAVINFLUOR.NS",
     "sector": "Chemicals",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 7493.5
   },
   {
     "symbol": "NESTLEIND.NS",
     "sector": "Consumer",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1414.8
   },
   {
     "symbol": "NMDC.NS",
     "sector": "Mining",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 88.42
   },
   {
     "symbol": "NTPC.NS",
     "sector": "Power",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 365.8
   },
   {
     "symbol": "OBEROIRLTY.NS",
     "sector": "Real Estate",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1683.5
   },
   {
     "symbol": "OFSS.NS",
     "sector": "IT",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 9638.5
   },
   {
     "symbol": "ONGC.NS",
     "sector": "Oil & Gas",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 246.25
   },
   {
     "symbol": "PAGEIND.NS",
     "sector": "Consumer",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 39975.0
   },
   {
     "symbol": "PEL.NS",
@@ -735,133 +854,155 @@
     "symbol": "PERSISTENT.NS",
     "sector": "IT",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 4829.0
   },
   {
     "symbol": "PETRONET.NS",
     "sector": "Oil & Gas",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 288.7
   },
   {
     "symbol": "PIDILITIND.NS",
     "sector": "Chemicals",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1579.9
   },
   {
     "symbol": "PIIND.NS",
     "sector": "Chemicals",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 2803.6
   },
   {
     "symbol": "POLYCAB.NS",
     "sector": "Capital Goods",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 10083.0
   },
   {
     "symbol": "POWERGRID.NS",
     "sector": "Power",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 292.25
   },
   {
     "symbol": "PVRINOX.NS",
     "sector": "Entertainment",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 948.9
   },
   {
     "symbol": "RAMCOCEM.NS",
     "sector": "Cement",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 885.3
   },
   {
     "symbol": "RECLTD.NS",
     "sector": "Financial Services",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 355.35
   },
   {
     "symbol": "RELIANCE.NS",
     "sector": "Oil & Gas",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1309.5
   },
   {
     "symbol": "SAIL.NS",
     "sector": "Metals",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 180.05
   },
   {
     "symbol": "SBICARD.NS",
     "sector": "Financial Services",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 616.9
   },
   {
     "symbol": "SBILIFE.NS",
     "sector": "Insurance",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1800.2
   },
   {
     "symbol": "SBIN.NS",
     "sector": "Banking",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1035.1
   },
   {
     "symbol": "SHREECEM.NS",
     "sector": "Cement",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 25075.0
   },
   {
     "symbol": "SIEMENS.NS",
     "sector": "Capital Goods",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 3759.6
   },
   {
     "symbol": "SRF.NS",
     "sector": "Chemicals",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 2709.8
   },
   {
     "symbol": "SUNPHARMA.NS",
     "sector": "Pharma",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1838.3
   },
   {
     "symbol": "SYNGENE.NS",
     "sector": "Pharma",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 440.75
   },
   {
     "symbol": "TATACHEM.NS",
     "sector": "Chemicals",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 729.15
   },
   {
     "symbol": "TATACOMM.NS",
     "sector": "Telecom",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1988.8
   },
   {
     "symbol": "TATACONSUM.NS",
     "sector": "Consumer",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1111.5
   },
   {
     "symbol": "TATAMOTORS.NS",
@@ -873,96 +1014,112 @@
     "symbol": "TATAPOWER.NS",
     "sector": "Power",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 402.35
   },
   {
     "symbol": "TATASTEEL.NS",
     "sector": "Metals",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 198.96
   },
   {
     "symbol": "TCS.NS",
     "sector": "IT",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 2125.0
   },
   {
     "symbol": "TECHM.NS",
     "sector": "IT",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1409.6
   },
   {
     "symbol": "TITAN.NS",
     "sector": "Consumer Durables",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 4419.9
   },
   {
     "symbol": "TORNTPHARM.NS",
     "sector": "Pharma",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 4429.8
   },
   {
     "symbol": "TORNTPOWER.NS",
     "sector": "Power",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1438.4
   },
   {
     "symbol": "TRENT.NS",
     "sector": "Retail",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 3205.8
   },
   {
     "symbol": "TVSMOTOR.NS",
     "sector": "Auto",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 3442.9
   },
   {
     "symbol": "UBL.NS",
     "sector": "Consumer",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1341.9
   },
   {
     "symbol": "ULTRACEMCO.NS",
     "sector": "Cement",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 11367.0
   },
   {
     "symbol": "UPL.NS",
     "sector": "Chemicals",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 608.65
   },
   {
     "symbol": "VEDL.NS",
     "sector": "Metals",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 300.8
   },
   {
     "symbol": "VOLTAS.NS",
     "sector": "Consumer Durables",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1343.4
   },
   {
     "symbol": "WIPRO.NS",
     "sector": "IT",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 180.8
   },
   {
     "symbol": "ZYDUSLIFE.NS",
     "sector": "Pharma",
     "score": 0,
-    "watchlist": false
+    "watchlist": false,
+    "price": 1070.8
   }
 ]
