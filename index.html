@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset="UTF-8">
-<title>Nifty Dashboard</title>
+<title>Nifty Stock Dashboard</title>
 
 <style>
 
@@ -14,10 +15,10 @@ body{
 
 .card{
     background:white;
-    padding:15px;
+    padding:20px;
     margin-bottom:20px;
     border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    box-shadow:0px 2px 10px rgba(0,0,0,0.1);
 }
 
 h1{
@@ -29,6 +30,8 @@ input{
     padding:10px;
     margin-bottom:15px;
     font-size:16px;
+    border:1px solid #ccc;
+    border-radius:5px;
 }
 
 table{
@@ -36,18 +39,29 @@ table{
     border-collapse:collapse;
 }
 
-th,td{
+th, td{
     border:1px solid #ddd;
     padding:8px;
     text-align:left;
 }
 
 th{
-    background:#eaeaea;
+    background:#007bff;
+    color:white;
+}
+
+tr:nth-child(even){
+    background:#f9f9f9;
 }
 
 tr:hover{
-    background:#f5f5f5;
+    background:#f1f1f1;
+}
+
+.stat{
+    font-size:20px;
+    font-weight:bold;
+    color:green;
 }
 
 </style>
@@ -56,107 +70,109 @@ tr:hover{
 
 <body>
 
-<h1>📈 Stock Dashboard</h1>
+<h1>📈 Nifty Stock Dashboard</h1>
 
 <div class="card">
-    <h2>📊 Market Health</h2>
-    <h3>78%</h3>
-    <p>Last Updated: 21-Jun-2026</p>
+
+<h2>📊 Dashboard Summary</h2>
+
+<p>
+Total Stocks:
+<span class="stat" id="stockCount">0</span>
+</p>
+
 </div>
 
 <div class="card">
 
-    <h2>📋 Stock Master List</h2>
+<h2>📋 Stock Master List</h2>
 
-    <input
-        type="text"
-        id="searchBox"
-        placeholder="Search Stock..."
-        onkeyup="filterTable()">
+<input
+type="text"
+id="searchBox"
+placeholder="Search Stock..."
+onkeyup="filterTable()">
 
-    <table id="stockTable">
+<table id="stockTable">
 
-        <thead>
-            <tr>
-                <th>Symbol</th>
-                <th>Sector</th>
-            </tr>
-        </thead>
+<thead>
+<tr>
+<th>Stock</th>
+<th>Sector</th>
+<th>Score</th>
+</tr>
+</thead>
 
-        <tbody id="tableBody">
+<tbody id="tableBody">
 
-        </tbody>
+</tbody>
 
-    </table>
+</table>
 
 </div>
 
 <script>
 
-fetch("sector_mapping.csv")
-.then(response => response.text())
-.then(csv => {
+let allStocks = [];
 
-    const rows = csv.split("\n").slice(1);
+fetch("stocks.json")
+.then(response => response.json())
+.then(data => {
 
-    let html = "";
+    allStocks = data;
 
-    rows.forEach(row => {
+    document.getElementById("stockCount").innerText =
+    data.length;
 
-        const cols = row.split(",");
+    renderTable(data);
 
-        if(cols.length >= 2){
+})
+.catch(error => {
 
-            html += `
-            <tr>
-                <td>${cols[0].trim()}</td>
-                <td>${cols[1].trim()}</td>
-            </tr>
-            `;
-        }
+    console.error(error);
 
-    });
-
-    document.getElementById("tableBody").innerHTML = html;
+    document.getElementById("tableBody").innerHTML =
+    "<tr><td colspan='3'>Unable to load stocks.json</td></tr>";
 
 });
 
+function renderTable(data){
+
+    let html = "";
+
+    data.forEach(stock => {
+
+        html += `
+        <tr>
+            <td>${stock.symbol}</td>
+            <td>${stock.sector}</td>
+            <td>${stock.score}</td>
+        </tr>
+        `;
+
+    });
+
+    document.getElementById("tableBody").innerHTML =
+    html;
+}
+
 function filterTable(){
 
-    const input =
-    document.getElementById("searchBox");
+    const search =
+    document.getElementById("searchBox")
+    .value
+    .toUpperCase();
 
-    const filter =
-    input.value.toUpperCase();
+    const filtered =
+    allStocks.filter(stock =>
+        stock.symbol.toUpperCase().includes(search)
+    );
 
-    const table =
-    document.getElementById("stockTable");
-
-    const tr =
-    table.getElementsByTagName("tr");
-
-    for(let i=1;i<tr.length;i++){
-
-        const td =
-        tr[i].getElementsByTagName("td")[0];
-
-        if(td){
-
-            const txtValue =
-            td.textContent ||
-            td.innerText;
-
-            tr[i].style.display =
-            txtValue.toUpperCase()
-            .indexOf(filter) > -1
-            ? ""
-            : "none";
-
-        }
-    }
+    renderTable(filtered);
 }
 
 </script>
 
 </body>
+
 </html>
