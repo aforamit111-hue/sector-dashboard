@@ -1,6 +1,6 @@
 name: Scanner
 
-on:
+"on":
 workflow_dispatch:
 
 jobs:
