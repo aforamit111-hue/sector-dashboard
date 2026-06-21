@@ -5,15 +5,13 @@ workflow_dispatch:
 
 jobs:
 scan:
-
-```
 runs-on: ubuntu-latest
 
+```
 permissions:
   contents: write
 
 steps:
-
   - name: Checkout Repository
     uses: actions/checkout@v4
 
@@ -40,4 +38,3 @@ steps:
       git diff --staged --quiet || git commit -m "Auto update market data"
 
       git push
-```
