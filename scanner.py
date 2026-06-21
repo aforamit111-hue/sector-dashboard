@@ -1,44 +1,52 @@
-name: Scanner
+import json
+import yfinance as yf
 
-on:
-workflow_dispatch:
+# Load stocks.json
+with open("stocks.json", "r", encoding="utf-8") as f:
+    stocks = json.load(f)
 
-jobs:
+print("Updating prices...")
 
-scan:
+for stock in stocks:
 
-```
-runs-on: ubuntu-latest
+    symbol = stock["symbol"]
 
-permissions:
-  contents: write
+    try:
 
-steps:
+        ticker = yf.Ticker(symbol)
 
-  - name: Checkout Repository
-    uses: actions/checkout@v4
+        hist = ticker.history(period="5d")
 
-  - name: Setup Python
-    uses: actions/setup-python@v5
-    with:
-      python-version: "3.11"
+        if len(hist) > 0:
 
-  - name: Install Libraries
-    run: |
-      pip install yfinance pandas numpy
+            latest_price = round(
+                float(hist["Close"].iloc[-1]),
+                2
+            )
 
-  - name: Run Scanner
-    run: |
-      python scanner.py
+            stock["price"] = latest_price
 
-  - name: Commit Changes
-    run: |
-      git config --global user.name "github-actions"
-      git config --global user.email "actions@github.com"
+            print(
+                symbol,
+                "Price:",
+                latest_price
+            )
 
-      git add stocks.json
+    except Exception as e:
 
-      git diff --staged --quiet || git commit -m "Auto update market data"
+        print(
+            symbol,
+            "Error:",
+            str(e)
+        )
 
-      git push
-```
+# Save updated stocks.json
+with open("stocks.json", "w", encoding="utf-8") as f:
+
+    json.dump(
+        stocks,
+        f,
+        indent=2
+    )
+
+print("stocks.json updated successfully")
