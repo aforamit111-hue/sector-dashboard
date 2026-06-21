@@ -15,7 +15,8 @@
     "volume_ratio": 0.71,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "debug": "HELLO_AMIT"
   },
   {
     "symbol": "ACC.NS",
