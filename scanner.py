@@ -1,4 +1,3 @@
-```python
 import json
 import yfinance as yf
 
@@ -44,4 +43,3 @@ for stock in stocks[:5]:
             "Error:",
             str(e)
         )
-```
