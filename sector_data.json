@@ -1,0 +1,12 @@
+[
+{
+    "sector":"IT",
+    "score":90,
+    "stocks":["TCS","INFY","HCLTECH"]
+},
+{
+    "sector":"BANKING",
+    "score":88,
+    "stocks":["HDFCBANK","ICICIBANK","AXISBANK"]
+}
+]
