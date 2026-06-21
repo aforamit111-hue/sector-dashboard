@@ -30,9 +30,11 @@ fetch("sector_data.json")
 .then(data => {
 
 let html = `
+html = `
 <div class="card">
 <h2>📊 Market Health</h2>
 <h1>${data.market_health}%</h1>
+<p>Last Updated: ${data.last_updated}</p>
 </div>
 `;
 
