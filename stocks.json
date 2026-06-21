@@ -1,14 +1,17 @@
 [
   {
-    "symbol": "ABB.NS",
-    "sector": "Capital Goods",
-    "score": 0
+    "symbol":"ABB.NS",
+    "sector":"Capital Goods",
+    "score":0,
+    "watchlist":false
   },
   {
-    "symbol": "ACC.NS",
-    "sector": "Cement",
-    "score": 0
-  },
+    "symbol":"ACC.NS",
+    "sector":"Cement",
+    "score":0,
+    "watchlist":false
+  }
+]
   {
     "symbol": "APLAPOLLO.NS",
     "sector": "Steel",
