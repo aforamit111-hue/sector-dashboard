@@ -57,6 +57,32 @@ ${item.stocks.map(stock=>`<li>${stock}</li>`).join("")}
 
 document.getElementById("dashboard").innerHTML = html;
 
+<script>
+
+fetch("sector_data.json")
+.then(response => response.json())
+.then(data => {
+
+let html="";
+
+data.forEach(item=>{
+
+html += `
+<div class="card">
+<h2>${item.sector}</h2>
+<p>Score: ${item.score}</p>
+<ul>
+${item.stocks.map(stock=>`<li>${stock}</li>`).join("")}
+</ul>
+</div>
+`;
+
+});
+
+document.getElementById("dashboard").innerHTML = html;
+
+});
+
 </script>
 
 </body>
