@@ -1,27 +1,20 @@
-[
- {
-   "sector":"IT",
-   "score":92,
-   "stocks":["TCS","INFY","HCLTECH"]
- },
- {
-   "sector":"BANKING",
-   "score":89,
-   "stocks":["HDFCBANK","ICICIBANK","AXISBANK"]
- },
- {
-   "sector":"AUTO",
-   "score":85,
-   "stocks":["M&M","MARUTI","TVSMOTOR"]
- },
- {
-   "sector":"PHARMA",
-   "score":82,
-   "stocks":["SUNPHARMA","CIPLA","DRREDDY"]
- },
- {
-   "sector":"CAPITAL GOODS",
-   "score":80,
-   "stocks":["SIEMENS","ABB","CUMMINSIND"]
- }
-]
+{
+  "market_health": 78,
+  "sectors": [
+    {
+      "sector": "IT",
+      "score": 92,
+      "stocks": ["TCS", "INFY", "HCLTECH"]
+    },
+    {
+      "sector": "BANKING",
+      "score": 89,
+      "stocks": ["HDFCBANK", "ICICIBANK", "AXISBANK"]
+    },
+    {
+      "sector": "AUTO",
+      "score": 85,
+      "stocks": ["M&M", "MARUTI", "TVSMOTOR"]
+    }
+  ]
+}
