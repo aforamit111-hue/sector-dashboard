@@ -1,37 +1,93 @@
+```html
 <!DOCTYPE html>
 <html>
-
 <head>
 <meta charset="UTF-8">
-<title>Nifty Stock Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nifty Stock Dashboard V2</title>
 
 <style>
 
+*{
+    box-sizing:border-box;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    background:#f4f4f4;
+    font-family:Arial,sans-serif;
+    margin:0;
     padding:20px;
+    background:#f4f6f9;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
 }
 
 .card{
     background:white;
     padding:20px;
+    border-radius:12px;
     margin-bottom:20px;
-    border-radius:10px;
-    box-shadow:0px 2px 10px rgba(0,0,0,0.1);
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-h1{
+.summary{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.summary-box{
+    flex:1;
+    min-width:200px;
+    background:#007bff;
+    color:white;
+    padding:15px;
+    border-radius:10px;
     text-align:center;
 }
 
-input{
-    width:100%;
+.summary-box h2{
+    margin:0;
+    font-size:32px;
+}
+
+#sectorCards{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.sector-card{
+    background:white;
+    border-left:5px solid #007bff;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+    min-width:180px;
+    box-shadow:0 1px 5px rgba(0,0,0,0.1);
+}
+
+.sector-card:hover{
+    transform:scale(1.03);
+}
+
+.filters{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+input,select{
     padding:10px;
-    margin-bottom:15px;
-    font-size:16px;
-    border:1px solid #ccc;
-    border-radius:5px;
+    border:1px solid #ddd;
+    border-radius:6px;
+}
+
+input{
+    flex:1;
+    min-width:250px;
 }
 
 table{
@@ -39,10 +95,9 @@ table{
     border-collapse:collapse;
 }
 
-th, td{
+th,td{
     border:1px solid #ddd;
-    padding:8px;
-    text-align:left;
+    padding:10px;
 }
 
 th{
@@ -55,31 +110,35 @@ tr:nth-child(even){
 }
 
 tr:hover{
-    background:#f1f1f1;
-}
-
-.stat{
-    font-size:20px;
-    font-weight:bold;
-    color:green;
+    background:#eef5ff;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <h1>📈 Nifty Stock Dashboard</h1>
 
+<div class="summary">
+
+<div class="summary-box">
+    <p>Total Stocks</p>
+    <h2 id="stockCount">0</h2>
+</div>
+
+<div class="summary-box">
+    <p>Total Sectors</p>
+    <h2 id="sectorCount">0</h2>
+</div>
+
+</div>
+
 <div class="card">
 
-<h2>📊 Dashboard Summary</h2>
+<h2>📊 Sector Summary</h2>
 
-<p>
-Total Stocks:
-<span class="stat" id="stockCount">0</span>
-</p>
+<div id="sectorCards"></div>
 
 </div>
 
@@ -87,13 +146,23 @@ Total Stocks:
 
 <h2>📋 Stock Master List</h2>
 
+<div class="filters">
+
+<select id="sectorFilter" onchange="applyFilters()">
+<option value="All">All Sectors</option>
+</select>
+
 <input
 type="text"
 id="searchBox"
 placeholder="Search Stock..."
-onkeyup="filterTable()">
+onkeyup="applyFilters()">
 
-<table id="stockTable">
+</div>
+
+<br>
+
+<table>
 
 <thead>
 <tr>
@@ -103,9 +172,7 @@ onkeyup="filterTable()">
 </tr>
 </thead>
 
-<tbody id="tableBody">
-
-</tbody>
+<tbody id="tableBody"></tbody>
 
 </table>
 
@@ -113,66 +180,149 @@ onkeyup="filterTable()">
 
 <script>
 
-let allStocks = [];
+let allStocks=[];
 
 fetch("stocks.json")
-.then(response => response.json())
-.then(data => {
+.then(response=>response.json())
+.then(data=>{
 
-    allStocks = data;
+allStocks=data;
 
-    document.getElementById("stockCount").innerText =
-    data.length;
+document.getElementById("stockCount").innerText=
+data.length;
 
-    renderTable(data);
+const sectors=[...new Set(
+data.map(stock=>stock.sector)
+)];
 
-})
-.catch(error => {
+document.getElementById("sectorCount").innerText=
+sectors.length;
 
-    console.error(error);
+populateDropdown(sectors);
 
-    document.getElementById("tableBody").innerHTML =
-    "<tr><td colspan='3'>Unable to load stocks.json</td></tr>";
+createSectorCards(data);
+
+renderTable(data);
 
 });
 
-function renderTable(data){
+function populateDropdown(sectors){
 
-    let html = "";
+const dropdown=
+document.getElementById("sectorFilter");
 
-    data.forEach(stock => {
+sectors.sort().forEach(sector=>{
 
-        html += `
-        <tr>
-            <td>${stock.symbol}</td>
-            <td>${stock.sector}</td>
-            <td>${stock.score}</td>
-        </tr>
-        `;
+dropdown.innerHTML+=`
+<option value="${sector}">
+${sector}
+</option>
+`;
 
-    });
+});
 
-    document.getElementById("tableBody").innerHTML =
-    html;
 }
 
-function filterTable(){
+function createSectorCards(data){
 
-    const search =
-    document.getElementById("searchBox")
-    .value
-    .toUpperCase();
+const sectorCounts={};
 
-    const filtered =
-    allStocks.filter(stock =>
-        stock.symbol.toUpperCase().includes(search)
-    );
+data.forEach(stock=>{
 
-    renderTable(filtered);
+sectorCounts[stock.sector]=
+(sectorCounts[stock.sector]||0)+1;
+
+});
+
+let html="";
+
+Object.entries(sectorCounts)
+.sort((a,b)=>b[1]-a[1])
+.forEach(([sector,count])=>{
+
+html+=`
+
+<div
+class="sector-card"
+onclick="selectSector('${sector}')">
+
+<h3>${sector}</h3>
+
+<p>${count} Stocks</p>
+
+</div>
+
+`;
+
+});
+
+document.getElementById("sectorCards")
+.innerHTML=html;
+
+}
+
+function renderTable(data){
+
+let html="";
+
+data.forEach(stock=>{
+
+html+=`
+<tr>
+<td>${stock.symbol}</td>
+<td>${stock.sector}</td>
+<td>${stock.score}</td>
+</tr>
+`;
+
+});
+
+document.getElementById("tableBody")
+.innerHTML=html;
+
+}
+
+function applyFilters(){
+
+const search=
+document.getElementById("searchBox")
+.value.toUpperCase();
+
+const sector=
+document.getElementById("sectorFilter")
+.value;
+
+const filtered=
+allStocks.filter(stock=>{
+
+const matchSearch=
+stock.symbol
+.toUpperCase()
+.includes(search);
+
+const matchSector=
+sector==="All" ||
+stock.sector===sector;
+
+return matchSearch && matchSector;
+
+});
+
+renderTable(filtered);
+
+}
+
+function selectSector(sector){
+
+document.getElementById("sectorFilter")
+.value=sector;
+
+applyFilters();
+
 }
 
 </script>
 
 </body>
-
 </html>
+```
