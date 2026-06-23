@@ -16,7 +16,11 @@
     "btst_candidate": false,
     "swing_candidate": false,
     "hilega_milega": false,
-    "debug": "HELLO_AMIT"
+    "debug": "HELLO_AMIT",
+    "atr": 167.64,
+    "atr_percent": 2.34,
+    "high_52w": 7790.64,
+    "distance_52w": 8.11
   },
   {
     "symbol": "ACC.NS",
@@ -34,7 +38,11 @@
     "volume_ratio": 0.9,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 24.57,
+    "atr_percent": 1.85,
+    "high_52w": 2017.13,
+    "distance_52w": 34.09
   },
   {
     "symbol": "APLAPOLLO.NS",
@@ -52,7 +60,11 @@
     "volume_ratio": 0.74,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 37.59,
+    "atr_percent": 2.04,
+    "high_52w": 2301.4,
+    "distance_52w": 19.96
   },
   {
     "symbol": "AUBANK.NS",
@@ -70,7 +82,11 @@
     "volume_ratio": 0.62,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 25.89,
+    "atr_percent": 2.52,
+    "high_52w": 1079.55,
+    "distance_52w": 4.93
   },
   {
     "symbol": "ADANIENT.NS",
@@ -88,7 +104,11 @@
     "volume_ratio": 0.78,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 80.11,
+    "atr_percent": 2.7,
+    "high_52w": 3091.7,
+    "distance_52w": 4.17
   },
   {
     "symbol": "ADANIPORTS.NS",
@@ -106,7 +126,11 @@
     "volume_ratio": 1.5,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 37.28,
+    "atr_percent": 2.09,
+    "high_52w": 1850.0,
+    "distance_52w": 3.57
   },
   {
     "symbol": "ALKEM.NS",
@@ -124,7 +148,11 @@
     "volume_ratio": 1.08,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 99.21,
+    "atr_percent": 1.83,
+    "high_52w": 5886.05,
+    "distance_52w": 7.99
   },
   {
     "symbol": "AMBUJACEM.NS",
@@ -142,7 +170,11 @@
     "volume_ratio": 0.92,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 10.33,
+    "atr_percent": 2.49,
+    "high_52w": 621.87,
+    "distance_52w": 33.29
   },
   {
     "symbol": "APOLLOHOSP.NS",
@@ -160,7 +192,11 @@
     "volume_ratio": 0.65,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 126.82,
+    "atr_percent": 1.49,
+    "high_52w": 8624.0,
+    "distance_52w": 1.58
   },
   {
     "symbol": "ASHOKLEY.NS",
@@ -178,7 +214,11 @@
     "volume_ratio": 0.68,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 4.7,
+    "atr_percent": 3.1,
+    "high_52w": 211.81,
+    "distance_52w": 28.49
   },
   {
     "symbol": "ASIANPAINT.NS",
@@ -196,7 +236,11 @@
     "volume_ratio": 0.86,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 52.33,
+    "atr_percent": 1.97,
+    "high_52w": 2960.02,
+    "distance_52w": 10.1
   },
   {
     "symbol": "ASTRAL.NS",
@@ -214,7 +258,11 @@
     "volume_ratio": 0.46,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 39.02,
+    "atr_percent": 2.56,
+    "high_52w": 1768.7,
+    "distance_52w": 13.87
   },
   {
     "symbol": "ATUL.NS",
@@ -232,7 +280,11 @@
     "volume_ratio": 1.06,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 147.14,
+    "atr_percent": 2.26,
+    "high_52w": 7762.06,
+    "distance_52w": 16.17
   },
   {
     "symbol": "AUROPHARMA.NS",
@@ -250,7 +302,11 @@
     "volume_ratio": 1.63,
     "btst_candidate": true,
     "swing_candidate": true,
-    "hilega_milega": true
+    "hilega_milega": true,
+    "atr": 38.47,
+    "atr_percent": 2.51,
+    "high_52w": 1550.0,
+    "distance_52w": 1.02
   },
   {
     "symbol": "AXISBANK.NS",
@@ -268,7 +324,11 @@
     "volume_ratio": 0.81,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 23.15,
+    "atr_percent": 1.7,
+    "high_52w": 1418.3,
+    "distance_52w": 3.86
   },
   {
     "symbol": "BAJAJ-AUTO.NS",
@@ -286,7 +346,11 @@
     "volume_ratio": 1.5,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 194.93,
+    "atr_percent": 1.94,
+    "high_52w": 10750.0,
+    "distance_52w": 6.74
   },
   {
     "symbol": "BAJFINANCE.NS",
@@ -304,7 +368,11 @@
     "volume_ratio": 0.78,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 21.91,
+    "atr_percent": 2.28,
+    "high_52w": 1102.5,
+    "distance_52w": 12.71
   },
   {
     "symbol": "BAJAJFINSV.NS",
@@ -322,7 +390,11 @@
     "volume_ratio": 0.91,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 37.41,
+    "atr_percent": 2.12,
+    "high_52w": 2195.0,
+    "distance_52w": 19.59
   },
   {
     "symbol": "BALKRISIND.NS",
@@ -340,7 +412,11 @@
     "volume_ratio": 0.46,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 75.56,
+    "atr_percent": 3.4,
+    "high_52w": 2787.61,
+    "distance_52w": 20.21
   },
   {
     "symbol": "BALRAMCHIN.NS",
@@ -358,7 +434,11 @@
     "volume_ratio": 0.46,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 18.43,
+    "atr_percent": 3.46,
+    "high_52w": 623.08,
+    "distance_52w": 14.47
   },
   {
     "symbol": "BANDHANBNK.NS",
@@ -376,7 +456,11 @@
     "volume_ratio": 0.72,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 6.9,
+    "atr_percent": 3.33,
+    "high_52w": 218.13,
+    "distance_52w": 5.05
   },
   {
     "symbol": "BANKBARODA.NS",
@@ -394,7 +478,11 @@
     "volume_ratio": 0.68,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 7.55,
+    "atr_percent": 2.72,
+    "high_52w": 315.3,
+    "distance_52w": 11.89
   },
   {
     "symbol": "BEL.NS",
@@ -412,7 +500,11 @@
     "volume_ratio": 1.27,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 9.08,
+    "atr_percent": 2.16,
+    "high_52w": 473.45,
+    "distance_52w": 11.29
   },
   {
     "symbol": "BERGEPAINT.NS",
@@ -430,7 +522,11 @@
     "volume_ratio": 0.67,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 18.53,
+    "atr_percent": 3.39,
+    "high_52w": 600.97,
+    "distance_52w": 9.11
   },
   {
     "symbol": "BHARATFORG.NS",
@@ -448,7 +544,11 @@
     "volume_ratio": 1.65,
     "btst_candidate": true,
     "swing_candidate": true,
-    "hilega_milega": true
+    "hilega_milega": true,
+    "atr": 55.74,
+    "atr_percent": 2.59,
+    "high_52w": 2158.5,
+    "distance_52w": 0.29
   },
   {
     "symbol": "BHARTIARTL.NS",
@@ -466,7 +566,11 @@
     "volume_ratio": 0.58,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 35.23,
+    "atr_percent": 1.85,
+    "high_52w": 2174.5,
+    "distance_52w": 12.55
   },
   {
     "symbol": "BHEL.NS",
@@ -484,7 +588,11 @@
     "volume_ratio": 0.86,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 15.02,
+    "atr_percent": 3.76,
+    "high_52w": 424.9,
+    "distance_52w": 5.9
   },
   {
     "symbol": "BIOCON.NS",
@@ -502,7 +610,11 @@
     "volume_ratio": 2.41,
     "btst_candidate": true,
     "swing_candidate": true,
-    "hilega_milega": true
+    "hilega_milega": true,
+    "atr": 9.69,
+    "atr_percent": 2.29,
+    "high_52w": 440.4,
+    "distance_52w": 3.91
   },
   {
     "symbol": "BOSCHLTD.NS",
@@ -520,7 +632,11 @@
     "volume_ratio": 0.81,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 939.29,
+    "atr_percent": 2.34,
+    "high_52w": 41945.0,
+    "distance_52w": 4.18
   },
   {
     "symbol": "BPCL.NS",
@@ -538,7 +654,11 @@
     "volume_ratio": 0.73,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 7.94,
+    "atr_percent": 2.57,
+    "high_52w": 391.65,
+    "distance_52w": 21.22
   },
   {
     "symbol": "BRITANNIA.NS",
@@ -556,7 +676,11 @@
     "volume_ratio": 0.66,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 73.64,
+    "atr_percent": 1.41,
+    "high_52w": 6336.0,
+    "distance_52w": 17.28
   },
   {
     "symbol": "CGPOWER.NS",
@@ -574,7 +698,11 @@
     "volume_ratio": 0.67,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 25.1,
+    "atr_percent": 2.64,
+    "high_52w": 969.9,
+    "distance_52w": 2.0
   },
   {
     "symbol": "CANBK.NS",
@@ -592,7 +720,11 @@
     "volume_ratio": 0.62,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 3.62,
+    "atr_percent": 2.78,
+    "high_52w": 157.69,
+    "distance_52w": 17.33
   },
   {
     "symbol": "CHAMBLFERT.NS",
@@ -610,7 +742,11 @@
     "volume_ratio": 0.51,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 13.35,
+    "atr_percent": 2.78,
+    "high_52w": 574.51,
+    "distance_52w": 16.39
   },
   {
     "symbol": "CHOLAFIN.NS",
@@ -628,7 +764,11 @@
     "volume_ratio": 1.18,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 48.31,
+    "atr_percent": 2.8,
+    "high_52w": 1830.13,
+    "distance_52w": 5.7
   },
   {
     "symbol": "CIPLA.NS",
@@ -646,7 +786,11 @@
     "volume_ratio": 2.67,
     "btst_candidate": true,
     "swing_candidate": true,
-    "hilega_milega": true
+    "hilega_milega": true,
+    "atr": 29.07,
+    "atr_percent": 2.03,
+    "high_52w": 1657.45,
+    "distance_52w": 13.54
   },
   {
     "symbol": "COALINDIA.NS",
@@ -664,7 +808,11 @@
     "volume_ratio": 0.17,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 10.12,
+    "atr_percent": 2.28,
+    "high_52w": 491.25,
+    "distance_52w": 9.55
   },
   {
     "symbol": "COFORGE.NS",
@@ -682,7 +830,11 @@
     "volume_ratio": 0.74,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 49.39,
+    "atr_percent": 3.33,
+    "high_52w": 1984.96,
+    "distance_52w": 25.38
   },
   {
     "symbol": "COLPAL.NS",
@@ -700,7 +852,11 @@
     "volume_ratio": 0.74,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 46.64,
+    "atr_percent": 2.35,
+    "high_52w": 2448.35,
+    "distance_52w": 19.11
   },
   {
     "symbol": "CONCOR.NS",
@@ -718,7 +874,11 @@
     "volume_ratio": 1.53,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": true
+    "hilega_milega": true,
+    "atr": 9.52,
+    "atr_percent": 1.99,
+    "high_52w": 620.02,
+    "distance_52w": 22.7
   },
   {
     "symbol": "CROMPTON.NS",
@@ -736,7 +896,11 @@
     "volume_ratio": 0.95,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 7.92,
+    "atr_percent": 2.91,
+    "high_52w": 358.81,
+    "distance_52w": 24.07
   },
   {
     "symbol": "CUMMINSIND.NS",
@@ -754,7 +918,11 @@
     "volume_ratio": 0.82,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 143.96,
+    "atr_percent": 2.51,
+    "high_52w": 6100.0,
+    "distance_52w": 5.98
   },
   {
     "symbol": "DABUR.NS",
@@ -772,7 +940,11 @@
     "volume_ratio": 0.67,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 8.3,
+    "atr_percent": 1.98,
+    "high_52w": 573.97,
+    "distance_52w": 26.86
   },
   {
     "symbol": "DALBHARAT.NS",
@@ -790,7 +962,11 @@
     "volume_ratio": 1.14,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 39.95,
+    "atr_percent": 2.38,
+    "high_52w": 2484.34,
+    "distance_52w": 32.35
   },
   {
     "symbol": "DEEPAKNTR.NS",
@@ -808,7 +984,11 @@
     "volume_ratio": 1.37,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 51.7,
+    "atr_percent": 3.16,
+    "high_52w": 2003.71,
+    "distance_52w": 18.26
   },
   {
     "symbol": "DIVISLAB.NS",
@@ -826,7 +1006,11 @@
     "volume_ratio": 0.89,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 140.82,
+    "atr_percent": 2.09,
+    "high_52w": 7039.45,
+    "distance_52w": 4.15
   },
   {
     "symbol": "DIXON.NS",
@@ -844,7 +1028,11 @@
     "volume_ratio": 1.23,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": true
+    "hilega_milega": true,
+    "atr": 385.07,
+    "atr_percent": 3.23,
+    "high_52w": 18471.0,
+    "distance_52w": 35.4
   },
   {
     "symbol": "DLF.NS",
@@ -862,7 +1050,11 @@
     "volume_ratio": 0.82,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 18.34,
+    "atr_percent": 3.0,
+    "high_52w": 862.39,
+    "distance_52w": 28.99
   },
   {
     "symbol": "DRREDDY.NS",
@@ -880,7 +1072,11 @@
     "volume_ratio": 2.12,
     "btst_candidate": true,
     "swing_candidate": true,
-    "hilega_milega": true
+    "hilega_milega": true,
+    "atr": 22.84,
+    "atr_percent": 1.76,
+    "high_52w": 1375.9,
+    "distance_52w": 5.42
   },
   {
     "symbol": "EICHERMOT.NS",
@@ -898,7 +1094,11 @@
     "volume_ratio": 0.75,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 159.29,
+    "atr_percent": 2.1,
+    "high_52w": 8230.0,
+    "distance_52w": 7.92
   },
   {
     "symbol": "ESCORTS.NS",
@@ -916,7 +1116,11 @@
     "volume_ratio": 1.26,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": true
+    "hilega_milega": true,
+    "atr": 69.77,
+    "atr_percent": 2.36,
+    "high_52w": 4159.02,
+    "distance_52w": 29.03
   },
   {
     "symbol": "EXIDEIND.NS",
@@ -934,7 +1138,11 @@
     "volume_ratio": 0.65,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 9.17,
+    "atr_percent": 2.42,
+    "high_52w": 431.0,
+    "distance_52w": 12.05
   },
   {
     "symbol": "FEDERALBNK.NS",
@@ -952,7 +1160,11 @@
     "volume_ratio": 0.3,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 6.58,
+    "atr_percent": 2.06,
+    "high_52w": 324.9,
+    "distance_52w": 1.54
   },
   {
     "symbol": "GAIL.NS",
@@ -970,7 +1182,11 @@
     "volume_ratio": 0.82,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 4.19,
+    "atr_percent": 2.41,
+    "high_52w": 188.46,
+    "distance_52w": 7.76
   },
   {
     "symbol": "GLENMARK.NS",
@@ -988,7 +1204,11 @@
     "volume_ratio": 1.0,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 58.91,
+    "atr_percent": 2.7,
+    "high_52w": 2474.0,
+    "distance_52w": 11.91
   },
   {
     "symbol": "GMRINFRA.NS",
@@ -1012,7 +1232,11 @@
     "volume_ratio": 0.82,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 21.04,
+    "atr_percent": 3.76,
+    "high_52w": 616.0,
+    "distance_52w": 9.13
   },
   {
     "symbol": "GODREJCP.NS",
@@ -1030,7 +1254,11 @@
     "volume_ratio": 0.41,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 22.64,
+    "atr_percent": 2.22,
+    "high_52w": 1291.23,
+    "distance_52w": 20.95
   },
   {
     "symbol": "GODREJPROP.NS",
@@ -1048,7 +1276,11 @@
     "volume_ratio": 1.37,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": true
+    "hilega_milega": true,
+    "atr": 49.84,
+    "atr_percent": 2.78,
+    "high_52w": 2450.9,
+    "distance_52w": 26.98
   },
   {
     "symbol": "GRANULES.NS",
@@ -1066,7 +1298,11 @@
     "volume_ratio": 1.09,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 24.47,
+    "atr_percent": 3.11,
+    "high_52w": 804.3,
+    "distance_52w": 2.03
   },
   {
     "symbol": "GRASIM.NS",
@@ -1084,7 +1320,11 @@
     "volume_ratio": 1.11,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 58.7,
+    "atr_percent": 1.87,
+    "high_52w": 3200.0,
+    "distance_52w": 1.74
   },
   {
     "symbol": "GUJGASLTD.NS",
@@ -1102,7 +1342,11 @@
     "volume_ratio": 1.04,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 13.7,
+    "atr_percent": 3.71,
+    "high_52w": 502.01,
+    "distance_52w": 26.44
   },
   {
     "symbol": "HAL.NS",
@@ -1120,7 +1364,11 @@
     "volume_ratio": 1.4,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": true
+    "hilega_milega": true,
+    "atr": 106.19,
+    "atr_percent": 2.36,
+    "high_52w": 5006.4,
+    "distance_52w": 10.11
   },
   {
     "symbol": "HAVELLS.NS",
@@ -1138,7 +1386,11 @@
     "volume_ratio": 0.61,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 26.12,
+    "atr_percent": 2.22,
+    "high_52w": 1608.14,
+    "distance_52w": 26.95
   },
   {
     "symbol": "HCLTECH.NS",
@@ -1156,7 +1408,11 @@
     "volume_ratio": 0.82,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 29.83,
+    "atr_percent": 2.69,
+    "high_52w": 1746.66,
+    "distance_52w": 36.48
   },
   {
     "symbol": "HDFCAMC.NS",
@@ -1174,7 +1430,11 @@
     "volume_ratio": 0.7,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 68.27,
+    "atr_percent": 2.55,
+    "high_52w": 2903.74,
+    "distance_52w": 7.71
   },
   {
     "symbol": "HDFCBANK.NS",
@@ -1192,7 +1452,11 @@
     "volume_ratio": 0.74,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 15.26,
+    "atr_percent": 1.97,
+    "high_52w": 1003.9,
+    "distance_52w": 22.84
   },
   {
     "symbol": "HDFCLIFE.NS",
@@ -1210,7 +1474,11 @@
     "volume_ratio": 1.09,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 12.69,
+    "atr_percent": 2.12,
+    "high_52w": 817.84,
+    "distance_52w": 26.95
   },
   {
     "symbol": "HEROMOTOCO.NS",
@@ -1228,7 +1496,11 @@
     "volume_ratio": 0.6,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 92.76,
+    "atr_percent": 1.86,
+    "high_52w": 6266.36,
+    "distance_52w": 20.61
   },
   {
     "symbol": "HINDALCO.NS",
@@ -1246,7 +1518,11 @@
     "volume_ratio": 1.07,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 31.18,
+    "atr_percent": 3.16,
+    "high_52w": 1176.0,
+    "distance_52w": 16.09
   },
   {
     "symbol": "HINDCOPPER.NS",
@@ -1264,7 +1540,11 @@
     "volume_ratio": 1.01,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 14.46,
+    "atr_percent": 2.89,
+    "high_52w": 758.83,
+    "distance_52w": 34.08
   },
   {
     "symbol": "HINDPETRO.NS",
@@ -1282,7 +1562,11 @@
     "volume_ratio": 0.77,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 11.56,
+    "atr_percent": 2.91,
+    "high_52w": 508.45,
+    "distance_52w": 21.97
   },
   {
     "symbol": "HINDUNILVR.NS",
@@ -1300,7 +1584,11 @@
     "volume_ratio": 0.33,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 39.89,
+    "atr_percent": 1.85,
+    "high_52w": 2701.08,
+    "distance_52w": 20.03
   },
   {
     "symbol": "ICICIBANK.NS",
@@ -1318,7 +1606,11 @@
     "volume_ratio": 0.77,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 25.21,
+    "atr_percent": 1.88,
+    "high_52w": 1488.51,
+    "distance_52w": 10.09
   },
   {
     "symbol": "ICICIGI.NS",
@@ -1336,7 +1628,11 @@
     "volume_ratio": 0.3,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 44.99,
+    "atr_percent": 2.46,
+    "high_52w": 2057.09,
+    "distance_52w": 10.92
   },
   {
     "symbol": "ICICIPRULI.NS",
@@ -1354,7 +1650,11 @@
     "volume_ratio": 1.07,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 13.57,
+    "atr_percent": 2.72,
+    "high_52w": 704.36,
+    "distance_52w": 29.21
   },
   {
     "symbol": "IDEA.NS",
@@ -1372,7 +1672,11 @@
     "volume_ratio": 0.78,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 0.53,
+    "atr_percent": 3.67,
+    "high_52w": 15.34,
+    "distance_52w": 5.8
   },
   {
     "symbol": "IDFCFIRSTB.NS",
@@ -1390,7 +1694,11 @@
     "volume_ratio": 1.16,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 2.03,
+    "atr_percent": 2.58,
+    "high_52w": 87.0,
+    "distance_52w": 9.48
   },
   {
     "symbol": "IEX.NS",
@@ -1408,7 +1716,11 @@
     "volume_ratio": 1.09,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 2.93,
+    "atr_percent": 2.35,
+    "high_52w": 205.98,
+    "distance_52w": 39.41
   },
   {
     "symbol": "IGL.NS",
@@ -1426,7 +1738,11 @@
     "volume_ratio": 0.59,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 3.85,
+    "atr_percent": 2.27,
+    "high_52w": 223.11,
+    "distance_52w": 24.1
   },
   {
     "symbol": "INDHOTEL.NS",
@@ -1444,7 +1760,11 @@
     "volume_ratio": 1.27,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": true
+    "hilega_milega": true,
+    "atr": 15.46,
+    "atr_percent": 2.14,
+    "high_52w": 808.35,
+    "distance_52w": 10.43
   },
   {
     "symbol": "INDIAMART.NS",
@@ -1462,7 +1782,11 @@
     "volume_ratio": 0.95,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 47.44,
+    "atr_percent": 2.38,
+    "high_52w": 2720.44,
+    "distance_52w": 26.73
   },
   {
     "symbol": "INDIGO.NS",
@@ -1480,7 +1804,11 @@
     "volume_ratio": 0.56,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 117.31,
+    "atr_percent": 2.36,
+    "high_52w": 6232.5,
+    "distance_52w": 20.39
   },
   {
     "symbol": "INDUSINDBK.NS",
@@ -1498,7 +1826,11 @@
     "volume_ratio": 0.57,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 24.16,
+    "atr_percent": 2.67,
+    "high_52w": 968.85,
+    "distance_52w": 6.54
   },
   {
     "symbol": "INDUSTOWER.NS",
@@ -1516,7 +1848,11 @@
     "volume_ratio": 0.97,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 9.44,
+    "atr_percent": 2.36,
+    "high_52w": 481.5,
+    "distance_52w": 16.93
   },
   {
     "symbol": "INFY.NS",
@@ -1534,7 +1870,11 @@
     "volume_ratio": 1.16,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 33.05,
+    "atr_percent": 3.21,
+    "high_52w": 1691.4,
+    "distance_52w": 39.15
   },
   {
     "symbol": "IOC.NS",
@@ -1552,7 +1892,11 @@
     "volume_ratio": 1.06,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 3.36,
+    "atr_percent": 2.35,
+    "high_52w": 186.61,
+    "distance_52w": 23.28
   },
   {
     "symbol": "IRCTC.NS",
@@ -1570,7 +1914,11 @@
     "volume_ratio": 1.04,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 10.45,
+    "atr_percent": 2.02,
+    "high_52w": 787.42,
+    "distance_52w": 34.15
   },
   {
     "symbol": "JINDALSTEL.NS",
@@ -1588,7 +1936,11 @@
     "volume_ratio": 2.08,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 28.76,
+    "atr_percent": 2.66,
+    "high_52w": 1306.2,
+    "distance_52w": 17.12
   },
   {
     "symbol": "JKCEMENT.NS",
@@ -1606,7 +1958,11 @@
     "volume_ratio": 1.45,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": true
+    "hilega_milega": true,
+    "atr": 172.18,
+    "atr_percent": 3.12,
+    "high_52w": 7565.5,
+    "distance_52w": 27.06
   },
   {
     "symbol": "JSWENERGY.NS",
@@ -1624,7 +1980,11 @@
     "volume_ratio": 0.56,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 16.73,
+    "atr_percent": 2.94,
+    "high_52w": 615.26,
+    "distance_52w": 7.54
   },
   {
     "symbol": "JSWSTEEL.NS",
@@ -1642,7 +2002,11 @@
     "volume_ratio": 1.53,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 28.19,
+    "atr_percent": 2.27,
+    "high_52w": 1328.0,
+    "distance_52w": 6.46
   },
   {
     "symbol": "JUBLFOOD.NS",
@@ -1660,7 +2024,11 @@
     "volume_ratio": 0.36,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 10.97,
+    "atr_percent": 2.59,
+    "high_52w": 717.7,
+    "distance_52w": 41.0
   },
   {
     "symbol": "KOTAKBANK.NS",
@@ -1678,7 +2046,11 @@
     "volume_ratio": 0.73,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 7.46,
+    "atr_percent": 1.86,
+    "high_52w": 453.2,
+    "distance_52w": 11.37
   },
   {
     "symbol": "LALPATHLAB.NS",
@@ -1696,7 +2068,11 @@
     "volume_ratio": 0.27,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 60.22,
+    "atr_percent": 3.61,
+    "high_52w": 1803.0,
+    "distance_52w": 7.4
   },
   {
     "symbol": "LAURUSLABS.NS",
@@ -1714,7 +2090,11 @@
     "volume_ratio": 2.19,
     "btst_candidate": true,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 42.08,
+    "atr_percent": 2.84,
+    "high_52w": 1486.0,
+    "distance_52w": 0.34
   },
   {
     "symbol": "LICHSGFIN.NS",
@@ -1732,7 +2112,11 @@
     "volume_ratio": 0.71,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 12.5,
+    "atr_percent": 2.31,
+    "high_52w": 635.31,
+    "distance_52w": 14.81
   },
   {
     "symbol": "LT.NS",
@@ -1750,7 +2134,11 @@
     "volume_ratio": 1.12,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 78.07,
+    "atr_percent": 1.87,
+    "high_52w": 4397.05,
+    "distance_52w": 4.95
   },
   {
     "symbol": "LTIM.NS",
@@ -1774,7 +2162,11 @@
     "volume_ratio": 0.55,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 108.66,
+    "atr_percent": 3.27,
+    "high_52w": 4673.3,
+    "distance_52w": 28.86
   },
   {
     "symbol": "LUPIN.NS",
@@ -1792,7 +2184,11 @@
     "volume_ratio": 0.98,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 39.66,
+    "atr_percent": 1.68,
+    "high_52w": 2494.0,
+    "distance_52w": 5.46
   },
   {
     "symbol": "M&M.NS",
@@ -1810,7 +2206,11 @@
     "volume_ratio": 0.84,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 70.99,
+    "atr_percent": 2.34,
+    "high_52w": 3839.9,
+    "distance_52w": 20.9
   },
   {
     "symbol": "MANAPPURAM.NS",
@@ -1828,7 +2228,11 @@
     "volume_ratio": 0.65,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 10.51,
+    "atr_percent": 3.29,
+    "high_52w": 334.0,
+    "distance_52w": 4.39
   },
   {
     "symbol": "MARICO.NS",
@@ -1846,7 +2250,11 @@
     "volume_ratio": 0.79,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 17.02,
+    "atr_percent": 2.07,
+    "high_52w": 848.8,
+    "distance_52w": 3.27
   },
   {
     "symbol": "MARUTI.NS",
@@ -1864,7 +2272,11 @@
     "volume_ratio": 0.96,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 261.79,
+    "atr_percent": 1.95,
+    "high_52w": 17370.0,
+    "distance_52w": 22.56
   },
   {
     "symbol": "MCX.NS",
@@ -1882,7 +2294,11 @@
     "volume_ratio": 0.57,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 96.38,
+    "atr_percent": 3.4,
+    "high_52w": 3480.0,
+    "distance_52w": 18.65
   },
   {
     "symbol": "METROPOLIS.NS",
@@ -1900,7 +2316,11 @@
     "volume_ratio": 0.7,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 20.47,
+    "atr_percent": 3.77,
+    "high_52w": 598.82,
+    "distance_52w": 9.28
   },
   {
     "symbol": "MGL.NS",
@@ -1918,7 +2338,11 @@
     "volume_ratio": 0.63,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 34.07,
+    "atr_percent": 2.79,
+    "high_52w": 1549.34,
+    "distance_52w": 21.26
   },
   {
     "symbol": "MOTHERSON.NS",
@@ -1936,7 +2360,11 @@
     "volume_ratio": 0.69,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 4.02,
+    "atr_percent": 2.8,
+    "high_52w": 151.77,
+    "distance_52w": 5.38
   },
   {
     "symbol": "MPHASIS.NS",
@@ -1954,7 +2382,11 @@
     "volume_ratio": 1.64,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 69.69,
+    "atr_percent": 3.1,
+    "high_52w": 3037.2,
+    "distance_52w": 26.1
   },
   {
     "symbol": "MRF.NS",
@@ -1972,7 +2404,11 @@
     "volume_ratio": 1.19,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 2233.57,
+    "atr_percent": 1.7,
+    "high_52w": 163593.54,
+    "distance_52w": 19.71
   },
   {
     "symbol": "MUTHOOTFIN.NS",
@@ -1990,7 +2426,11 @@
     "volume_ratio": 0.99,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 106.07,
+    "atr_percent": 3.4,
+    "high_52w": 4114.71,
+    "distance_52w": 24.18
   },
   {
     "symbol": "NAUKRI.NS",
@@ -2008,7 +2448,11 @@
     "volume_ratio": 2.24,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 30.8,
+    "atr_percent": 3.04,
+    "high_52w": 1527.35,
+    "distance_52w": 33.77
   },
   {
     "symbol": "NAVINFLUOR.NS",
@@ -2026,7 +2470,11 @@
     "volume_ratio": 0.49,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 208.11,
+    "atr_percent": 2.77,
+    "high_52w": 7639.0,
+    "distance_52w": 1.81
   },
   {
     "symbol": "NESTLEIND.NS",
@@ -2044,7 +2492,11 @@
     "volume_ratio": 0.78,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 31.16,
+    "atr_percent": 2.24,
+    "high_52w": 1498.1,
+    "distance_52w": 7.07
   },
   {
     "symbol": "NMDC.NS",
@@ -2062,7 +2514,11 @@
     "volume_ratio": 1.5,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 2.38,
+    "atr_percent": 2.79,
+    "high_52w": 97.49,
+    "distance_52w": 12.54
   },
   {
     "symbol": "NTPC.NS",
@@ -2080,7 +2536,11 @@
     "volume_ratio": 0.88,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 7.53,
+    "atr_percent": 2.07,
+    "high_52w": 414.4,
+    "distance_52w": 12.02
   },
   {
     "symbol": "OBEROIRLTY.NS",
@@ -2098,7 +2558,11 @@
     "volume_ratio": 2.16,
     "btst_candidate": true,
     "swing_candidate": true,
-    "hilega_milega": true
+    "hilega_milega": true,
+    "atr": 41.57,
+    "atr_percent": 2.44,
+    "high_52w": 1995.18,
+    "distance_52w": 14.57
   },
   {
     "symbol": "OFSS.NS",
@@ -2116,7 +2580,11 @@
     "volume_ratio": 1.0,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 306.39,
+    "atr_percent": 3.11,
+    "high_52w": 10584.5,
+    "distance_52w": 6.82
   },
   {
     "symbol": "ONGC.NS",
@@ -2134,7 +2602,11 @@
     "volume_ratio": 0.45,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 5.41,
+    "atr_percent": 2.21,
+    "high_52w": 307.5,
+    "distance_52w": 20.54
   },
   {
     "symbol": "PAGEIND.NS",
@@ -2152,7 +2624,11 @@
     "volume_ratio": 0.7,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 1010.0,
+    "atr_percent": 2.53,
+    "high_52w": 49879.64,
+    "distance_52w": 19.86
   },
   {
     "symbol": "PEL.NS",
@@ -2176,7 +2652,11 @@
     "volume_ratio": 0.55,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 168.36,
+    "atr_percent": 3.48,
+    "high_52w": 6575.41,
+    "distance_52w": 26.45
   },
   {
     "symbol": "PETRONET.NS",
@@ -2194,7 +2674,11 @@
     "volume_ratio": 0.84,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 6.62,
+    "atr_percent": 2.32,
+    "high_52w": 322.68,
+    "distance_52w": 11.69
   },
   {
     "symbol": "PIDILITIND.NS",
@@ -2212,7 +2696,11 @@
     "volume_ratio": 0.85,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 31.36,
+    "atr_percent": 2.0,
+    "high_52w": 1599.3,
+    "distance_52w": 2.04
   },
   {
     "symbol": "PIIND.NS",
@@ -2230,7 +2718,11 @@
     "volume_ratio": 0.44,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 71.24,
+    "atr_percent": 2.57,
+    "high_52w": 4312.31,
+    "distance_52w": 35.83
   },
   {
     "symbol": "POLYCAB.NS",
@@ -2248,7 +2740,11 @@
     "volume_ratio": 0.98,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 212.84,
+    "atr_percent": 2.15,
+    "high_52w": 10126.0,
+    "distance_52w": 2.03
   },
   {
     "symbol": "POWERGRID.NS",
@@ -2266,7 +2762,11 @@
     "volume_ratio": 0.93,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 5.38,
+    "atr_percent": 1.84,
+    "high_52w": 324.95,
+    "distance_52w": 10.16
   },
   {
     "symbol": "PVRINOX.NS",
@@ -2284,7 +2784,11 @@
     "volume_ratio": 0.94,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 23.0,
+    "atr_percent": 2.36,
+    "high_52w": 1249.7,
+    "distance_52w": 22.13
   },
   {
     "symbol": "RAMCOCEM.NS",
@@ -2302,7 +2806,11 @@
     "volume_ratio": 1.01,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 25.57,
+    "atr_percent": 2.92,
+    "high_52w": 1214.5,
+    "distance_52w": 27.86
   },
   {
     "symbol": "RECLTD.NS",
@@ -2320,7 +2828,11 @@
     "volume_ratio": 1.03,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 9.6,
+    "atr_percent": 2.65,
+    "high_52w": 388.79,
+    "distance_52w": 6.92
   },
   {
     "symbol": "RELIANCE.NS",
@@ -2338,7 +2850,11 @@
     "volume_ratio": 0.87,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 26.79,
+    "atr_percent": 2.05,
+    "high_52w": 1604.38,
+    "distance_52w": 18.38
   },
   {
     "symbol": "SAIL.NS",
@@ -2356,7 +2872,11 @@
     "volume_ratio": 1.07,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 6.27,
+    "atr_percent": 3.71,
+    "high_52w": 209.7,
+    "distance_52w": 19.32
   },
   {
     "symbol": "SBICARD.NS",
@@ -2374,7 +2894,11 @@
     "volume_ratio": 0.66,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 15.17,
+    "atr_percent": 2.5,
+    "high_52w": 1011.46,
+    "distance_52w": 39.97
   },
   {
     "symbol": "SBILIFE.NS",
@@ -2392,7 +2916,11 @@
     "volume_ratio": 1.02,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 36.09,
+    "atr_percent": 2.02,
+    "high_52w": 2129.04,
+    "distance_52w": 16.1
   },
   {
     "symbol": "SBIN.NS",
@@ -2410,7 +2938,11 @@
     "volume_ratio": 0.77,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 18.74,
+    "atr_percent": 1.83,
+    "high_52w": 1212.84,
+    "distance_52w": 15.55
   },
   {
     "symbol": "SHREECEM.NS",
@@ -2428,7 +2960,11 @@
     "volume_ratio": 0.6,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 566.79,
+    "atr_percent": 2.26,
+    "high_52w": 32398.19,
+    "distance_52w": 22.73
   },
   {
     "symbol": "SIEMENS.NS",
@@ -2446,7 +2982,11 @@
     "volume_ratio": 0.59,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 86.21,
+    "atr_percent": 2.34,
+    "high_52w": 3937.3,
+    "distance_52w": 6.39
   },
   {
     "symbol": "SRF.NS",
@@ -2464,7 +3004,11 @@
     "volume_ratio": 1.67,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 65.29,
+    "atr_percent": 2.39,
+    "high_52w": 3314.53,
+    "distance_52w": 17.43
   },
   {
     "symbol": "SUNPHARMA.NS",
@@ -2482,7 +3026,11 @@
     "volume_ratio": 1.1,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 25.43,
+    "atr_percent": 1.36,
+    "high_52w": 1916.6,
+    "distance_52w": 2.54
   },
   {
     "symbol": "SYNGENE.NS",
@@ -2500,7 +3048,11 @@
     "volume_ratio": 0.96,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 13.09,
+    "atr_percent": 3.0,
+    "high_52w": 728.6,
+    "distance_52w": 40.16
   },
   {
     "symbol": "TATACHEM.NS",
@@ -2518,7 +3070,11 @@
     "volume_ratio": 0.56,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 21.41,
+    "atr_percent": 2.93,
+    "high_52w": 1011.1,
+    "distance_52w": 27.74
   },
   {
     "symbol": "TATACOMM.NS",
@@ -2536,7 +3092,11 @@
     "volume_ratio": 1.0,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 80.42,
+    "atr_percent": 3.97,
+    "high_52w": 2110.0,
+    "distance_52w": 4.11
   },
   {
     "symbol": "TATACONSUM.NS",
@@ -2554,7 +3114,11 @@
     "volume_ratio": 0.78,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 23.44,
+    "atr_percent": 2.12,
+    "high_52w": 1271.94,
+    "distance_52w": 13.22
   },
   {
     "symbol": "TATAMOTORS.NS",
@@ -2578,7 +3142,11 @@
     "volume_ratio": 0.97,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 7.31,
+    "atr_percent": 1.84,
+    "high_52w": 462.04,
+    "distance_52w": 13.8
   },
   {
     "symbol": "TATASTEEL.NS",
@@ -2596,7 +3164,11 @@
     "volume_ratio": 1.16,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 4.32,
+    "atr_percent": 2.23,
+    "high_52w": 219.87,
+    "distance_52w": 11.97
   },
   {
     "symbol": "TCS.NS",
@@ -2614,7 +3186,11 @@
     "volume_ratio": 1.07,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 52.31,
+    "atr_percent": 2.54,
+    "high_52w": 3357.78,
+    "distance_52w": 38.66
   },
   {
     "symbol": "TECHM.NS",
@@ -2632,7 +3208,11 @@
     "volume_ratio": 0.94,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 44.04,
+    "atr_percent": 3.11,
+    "high_52w": 1854.0,
+    "distance_52w": 23.65
   },
   {
     "symbol": "TITAN.NS",
@@ -2650,7 +3230,11 @@
     "volume_ratio": 0.69,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 103.94,
+    "atr_percent": 2.41,
+    "high_52w": 4605.0,
+    "distance_52w": 6.51
   },
   {
     "symbol": "TORNTPHARM.NS",
@@ -2668,7 +3252,11 @@
     "volume_ratio": 0.89,
     "btst_candidate": false,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 108.6,
+    "atr_percent": 2.41,
+    "high_52w": 4703.55,
+    "distance_52w": 4.03
   },
   {
     "symbol": "TORNTPOWER.NS",
@@ -2686,7 +3274,11 @@
     "volume_ratio": 0.67,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 39.68,
+    "atr_percent": 2.73,
+    "high_52w": 1817.8,
+    "distance_52w": 19.97
   },
   {
     "symbol": "TRENT.NS",
@@ -2704,7 +3296,11 @@
     "volume_ratio": 0.95,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 99.52,
+    "atr_percent": 3.17,
+    "high_52w": 6251.76,
+    "distance_52w": 49.73
   },
   {
     "symbol": "TVSMOTOR.NS",
@@ -2722,7 +3318,11 @@
     "volume_ratio": 0.75,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 72.62,
+    "atr_percent": 2.1,
+    "high_52w": 3956.17,
+    "distance_52w": 12.64
   },
   {
     "symbol": "UBL.NS",
@@ -2740,7 +3340,11 @@
     "volume_ratio": 0.65,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 29.05,
+    "atr_percent": 2.16,
+    "high_52w": 2099.19,
+    "distance_52w": 35.97
   },
   {
     "symbol": "ULTRACEMCO.NS",
@@ -2758,7 +3362,11 @@
     "volume_ratio": 0.83,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 206.71,
+    "atr_percent": 1.83,
+    "high_52w": 13110.0,
+    "distance_52w": 13.75
   },
   {
     "symbol": "UPL.NS",
@@ -2776,7 +3384,11 @@
     "volume_ratio": 0.97,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 15.0,
+    "atr_percent": 2.51,
+    "high_52w": 812.2,
+    "distance_52w": 26.52
   },
   {
     "symbol": "VEDL.NS",
@@ -2794,7 +3406,11 @@
     "volume_ratio": 6.58,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 11.74,
+    "atr_percent": 4.17,
+    "high_52w": 795.0,
+    "distance_52w": 64.57
   },
   {
     "symbol": "VOLTAS.NS",
@@ -2812,7 +3428,11 @@
     "volume_ratio": 1.13,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 44.29,
+    "atr_percent": 3.34,
+    "high_52w": 1577.54,
+    "distance_52w": 15.86
   },
   {
     "symbol": "WIPRO.NS",
@@ -2830,7 +3450,11 @@
     "volume_ratio": 0.77,
     "btst_candidate": false,
     "swing_candidate": false,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 5.52,
+    "atr_percent": 3.16,
+    "high_52w": 266.23,
+    "distance_52w": 34.46
   },
   {
     "symbol": "ZYDUSLIFE.NS",
@@ -2848,6 +3472,10 @@
     "volume_ratio": 1.69,
     "btst_candidate": true,
     "swing_candidate": true,
-    "hilega_milega": false
+    "hilega_milega": false,
+    "atr": 23.71,
+    "atr_percent": 2.13,
+    "high_52w": 1124.5,
+    "distance_52w": 1.09
   }
 ]
