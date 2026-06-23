@@ -31,6 +31,8 @@ fetch("stocks.json")
 
     renderWatchlist();
 
+    renderPortfolio();
+
 })
 .catch(err => {
 
@@ -633,5 +635,211 @@ event.target
 .add(
 "active"
 );
+
+}
+// =====================================
+// PORTFOLIO
+// =====================================
+
+let portfolio = JSON.parse(
+
+localStorage.getItem(
+"portfolio"
+)
+
+||
+
+"[]"
+
+);
+
+function addPortfolio(){
+
+const symbol =
+document
+.getElementById(
+"portfolioSymbol"
+)
+.value
+.toUpperCase();
+
+const qty =
+parseFloat(
+document
+.getElementById(
+"portfolioQty"
+)
+.value
+|| 0
+);
+
+const buyPrice =
+parseFloat(
+document
+.getElementById(
+"portfolioBuy"
+)
+.value
+|| 0
+);
+
+portfolio.push({
+
+symbol,
+
+qty,
+
+buyPrice
+
+});
+
+localStorage.setItem(
+
+"portfolio",
+
+JSON.stringify(
+portfolio
+)
+
+);
+
+renderPortfolio();
+
+}
+
+function renderPortfolio(){
+
+const body =
+
+document
+.getElementById(
+"portfolioBody"
+);
+
+if(!body)
+return;
+
+let html='';
+
+portfolio.forEach(
+
+(item,index)=>{
+
+const stock =
+
+allStocks.find(
+
+x=>
+
+x.symbol===item.symbol
+
+);
+
+const currentPrice =
+
+stock
+
+?
+
+stock.price
+
+:
+
+0;
+
+const investment =
+
+item.qty *
+item.buyPrice;
+
+const currentValue =
+
+item.qty *
+currentPrice;
+
+const pnl =
+
+currentValue -
+investment;
+
+const pnlPercent =
+
+investment > 0
+
+?
+
+(
+
+pnl /
+investment
+
+*
+100
+
+).toFixed(2)
+
+:
+
+0;
+
+html += `
+
+<tr>
+
+<td>${item.symbol}</td>
+
+<td>${item.qty}</td>
+
+<td>${item.buyPrice}</td>
+
+<td>${currentPrice}</td>
+
+<td>${investment.toFixed(2)}</td>
+
+<td>${currentValue.toFixed(2)}</td>
+
+<td>${pnl.toFixed(2)}</td>
+
+<td>${pnlPercent}%</td>
+
+<td>
+
+<button
+onclick="deletePortfolio(${index})">
+
+❌
+
+</button>
+
+</td>
+
+</tr>
+
+`;
+
+});
+
+body.innerHTML = html;
+
+}
+
+function deletePortfolio(index){
+
+portfolio.splice(
+index,
+1
+);
+
+localStorage.setItem(
+
+"portfolio",
+
+JSON.stringify(
+portfolio
+)
+
+);
+
+renderPortfolio();
 
 }
