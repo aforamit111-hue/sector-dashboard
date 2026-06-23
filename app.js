@@ -1053,3 +1053,46 @@ html += `
 body.innerHTML = html;
 
 }
+// =====================================
+// GLOBAL MARKETS
+// =====================================
+
+function loadMarketData(){
+
+document.getElementById(
+"niftyTicker"
+).innerHTML =
+
+"🇮🇳 NIFTY<br>25430<br>+0.45%";
+
+document.getElementById(
+"giftTicker"
+).innerHTML =
+
+"🌏 GIFT<br>25510<br>+0.32%";
+
+document.getElementById(
+"spTicker"
+).innerHTML =
+
+"🇺🇸 S&P500<br>6125<br>+0.21%";
+
+document.getElementById(
+"nasdaqTicker"
+).innerHTML =
+
+"🇺🇸 NASDAQ<br>20150<br>+0.48%";
+
+document.getElementById(
+"dowTicker"
+).innerHTML =
+
+"🇺🇸 DOW<br>44820<br>-0.15%";
+
+document.getElementById(
+"crudeTicker"
+).innerHTML =
+
+"🛢️ CRUDE<br>68.45<br>+0.82%";
+
+}
