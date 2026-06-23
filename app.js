@@ -33,6 +33,8 @@ fetch("stocks.json")
 
     renderPortfolio();
 
+    renderRecommendations();
+
     buildMarketHealth();
 
 })
