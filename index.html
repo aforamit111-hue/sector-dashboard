@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nifty Dashboard Pro V7 Premium</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<div class="header">
+
+    <div class="logo">
+        📈 Nifty Dashboard Pro V7
+    </div>
+
+    <div>
+
+        <button id="darkModeBtn">
+            🌙 Dark Mode
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- NAVIGATION -->
+<!-- ========================= -->
+
+<div class="nav-tabs">
+
+    <button class="tab-btn active"
+        onclick="openTab('dashboardTab')">
+        Dashboard
+    </button>
+
+    <button class="tab-btn"
+        onclick="openTab('screenerTab')">
+        Screener
+    </button>
+
+    <button class="tab-btn"
+        onclick="openTab('journalTab')">
+        Trade Journal
+    </button>
+
+    <button class="tab-btn"
+        onclick="openTab('watchlistTab')">
+        Watchlist
+    </button>
+
+    <button class="tab-btn"
+        onclick="openTab('sectorTab')">
+        Sector Analysis
+    </button>
+
+</div>
+
+<!-- ========================= -->
+<!-- DASHBOARD -->
+<!-- ========================= -->
+
+<div id="dashboardTab" class="tab-content active">
+
+    <h2>Market Dashboard</h2>
+
+    <div class="card-grid">
+
+        <div class="summary-card">
+            <h3>Total Stocks</h3>
+            <h1 id="totalStocks">0</h1>
+        </div>
+
+        <div class="summary-card">
+            <h3>Total Sectors</h3>
+            <h1 id="totalSectors">0</h1>
+        </div>
+
+        <div class="summary-card">
+            <h3>BTST</h3>
+            <h1 id="btstCount">0</h1>
+        </div>
+
+        <div class="summary-card">
+            <h3>Swing</h3>
+            <h1 id="swingCount">0</h1>
+        </div>
+
+        <div class="summary-card">
+            <h3>Hilega</h3>
+            <h1 id="hilegaCount">0</h1>
+        </div>
+
+        <div class="summary-card">
+            <h3>Market Health</h3>
+            <h1 id="marketHealth">--</h1>
+        </div>
+
+    </div>
+
+    <div class="dashboard-panels">
+
+        <div class="panel">
+            <h3>Top Momentum</h3>
+            <div id="topMomentum"></div>
+        </div>
+
+        <div class="panel">
+            <h3>Top BTST</h3>
+            <div id="topBTST"></div>
+        </div>
+
+        <div class="panel">
+            <h3>Top Swing</h3>
+            <div id="topSwing"></div>
+        </div>
+
+        <div class="panel">
+            <h3>Top Hilega</h3>
+            <div id="topHilega"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- SCREENER -->
+<!-- ========================= -->
+
+<div id="screenerTab" class="tab-content">
+
+<h2>Stock Screener</h2>
+
+<div class="filter-bar">
+
+<select id="sectorFilter">
+<option value="All">All Sectors</option>
+</select>
+
+<select id="signalFilter">
+
+<option value="All">All Signals</option>
+
+<option value="BTST">
+BTST
+</option>
+
+<option value="Swing">
+Swing
+</option>
+
+<option value="Hilega">
+Hilega
+</option>
+
+</select>
+
+<input
+type="text"
+id="searchBox"
+placeholder="Search Symbol">
+
+</div>
+
+<div class="table-container">
+
+<table id="stockTable">
+
+<thead>
+
+<tr>
+
+<th>⭐</th>
+
+<th>Symbol</th>
+
+<th>Sector</th>
+
+<th>Price</th>
+
+<th>RSI</th>
+
+<th>EMA3</th>
+
+<th>WMA21</th>
+
+<th>Volume Ratio</th>
+
+<th>ATR</th>
+
+<th>ATR %</th>
+
+<th>52W High</th>
+
+<th>Distance %</th>
+
+<th>Score</th>
+
+<th>BTST</th>
+
+<th>Swing</th>
+
+<th>Hilega</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tableBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- TRADE JOURNAL -->
+<!-- ========================= -->
+
+<div id="journalTab" class="tab-content">
+
+<h2>Trade Journal Pro</h2>
+
+<div class="journal-form">
+
+<input type="date" id="tradeDate">
+
+<select id="tradeType">
+
+<option>
+Intraday
+</option>
+
+<option>
+Positional
+</option>
+
+<option>
+BTST
+</option>
+
+</select>
+
+<input
+id="tradeSymbol"
+placeholder="Symbol">
+
+<input
+id="entryPrice"
+type="number"
+placeholder="Entry">
+
+<input
+id="exitPrice"
+type="number"
+placeholder="Exit">
+
+<input
+id="quantity"
+type="number"
+placeholder="Qty">
+
+<input
+id="brokerage"
+type="number"
+placeholder="Brokerage">
+
+<input
+id="charges"
+type="number"
+placeholder="Charges">
+
+<input
+id="riskReward"
+placeholder="RR">
+
+<input
+id="notes"
+placeholder="Notes">
+
+<input
+id="screenshotLink"
+placeholder="Screenshot Link">
+
+<button onclick="addTrade()">
+Add Trade
+</button>
+
+</div>
+
+<table id="journalTable">
+
+<thead>
+
+<tr>
+
+<th>Date</th>
+<th>Type</th>
+<th>Symbol</th>
+<th>Entry</th>
+<th>Exit</th>
+<th>Qty</th>
+<th>Gross</th>
+<th>Net</th>
+<th>RR</th>
+<th>Notes</th>
+
+</tr>
+
+</thead>
+
+<tbody id="journalBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- ========================= -->
+<!-- WATCHLIST -->
+<!-- ========================= -->
+
+<div id="watchlistTab" class="tab-content">
+
+<h2>My Watchlist</h2>
+
+<div id="watchlistContainer">
+
+No stocks added
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- SECTOR ANALYSIS -->
+<!-- ========================= -->
+
+<div id="sectorTab" class="tab-content">
+
+<h2>Sector Analysis</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Sector</th>
+
+<th>Stocks</th>
+
+<th>Avg Score</th>
+
+<th>BTST</th>
+
+<th>Swing</th>
+
+</tr>
+
+</thead>
+
+<tbody id="sectorTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="app.js"></script>
+<script src="trade-journal.js"></script>
+
+</body>
+</html>
