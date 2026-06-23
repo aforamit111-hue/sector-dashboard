@@ -86,6 +86,10 @@ function buildDashboard(){
 
     buildTopLists();
 
+    buildMarketHealth();
+
+    
+
 }
 
 // =====================================
