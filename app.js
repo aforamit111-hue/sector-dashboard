@@ -897,3 +897,157 @@ function buildMarketHealth(){
     statusEl.innerText =
     status;
 }
+// =====================================
+// RECOMMENDATION TRACKER
+// =====================================
+
+let recommendations = JSON.parse(
+
+localStorage.getItem(
+"recommendations"
+)
+
+||
+
+"[]"
+
+);
+
+function generateRecommendations(){
+
+const today =
+
+new Date()
+.toISOString()
+.split("T")[0];
+
+const picks =
+
+allStocks.filter(
+
+x=>
+
+x.btst_candidate ||
+
+x.swing_candidate ||
+
+x.hilega_milega
+
+);
+
+picks.forEach(stock=>{
+
+recommendations.push({
+
+date: today,
+
+symbol: stock.symbol,
+
+entry: stock.price,
+
+signal:
+
+stock.btst_candidate
+? "BTST"
+
+:
+
+stock.swing_candidate
+? "SWING"
+
+:
+
+"HILEGA"
+
+});
+
+});
+
+localStorage.setItem(
+
+"recommendations",
+
+JSON.stringify(
+recommendations
+)
+
+);
+
+renderRecommendations();
+
+}
+
+function renderRecommendations(){
+
+const body =
+
+document.getElementById(
+"recommendationBody"
+);
+
+if(!body) return;
+
+let html='';
+
+recommendations.forEach(rec=>{
+
+const stock =
+
+allStocks.find(
+
+x=>
+
+x.symbol===rec.symbol
+
+);
+
+const current =
+
+stock
+? stock.price
+: rec.entry;
+
+const pnl =
+
+current -
+rec.entry;
+
+const ret =
+
+(
+
+pnl /
+rec.entry
+
+*
+100
+
+).toFixed(2);
+
+html += `
+
+<tr>
+
+<td>${rec.date}</td>
+
+<td>${rec.symbol}</td>
+
+<td>${rec.signal}</td>
+
+<td>${rec.entry}</td>
+
+<td>${current}</td>
+
+<td>${pnl.toFixed(2)}</td>
+
+<td>${ret}%</td>
+
+</tr>
+
+`;
+
+});
+
+body.innerHTML = html;
+
+}
