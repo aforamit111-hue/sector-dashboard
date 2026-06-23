@@ -37,6 +37,8 @@ fetch("stocks.json")
 
     buildMarketHealth();
 
+    loadMarketData();
+
 })
 .catch(err => {
 
