@@ -33,6 +33,8 @@ fetch("stocks.json")
 
     renderPortfolio();
 
+    buildMarketHealth();
+
 })
 .catch(err => {
 
@@ -86,8 +88,50 @@ function buildDashboard(){
 
     buildTopLists();
 
-    buildMarketHealth();
+    function buildMarketHealth(){
 
+    console.log("Market Health Running");
+
+    if(allStocks.length === 0){
+        return;
+    }
+
+    const above50 = allStocks.filter(x =>
+        x.price &&
+        x.dma50 &&
+        x.price > x.dma50
+    ).length;
+
+    const health = Math.round(
+        (above50 / allStocks.length) * 100
+    );
+
+    const healthEl =
+        document.getElementById("marketHealth");
+
+    const statusEl =
+        document.getElementById("marketStatus");
+
+    if(!healthEl || !statusEl){
+        console.log("Market Health elements not found");
+        return;
+    }
+
+    healthEl.innerText = health + "%";
+
+    let status = "🔴 Weak";
+
+    if(health >= 60){
+        status = "🟢 Bullish";
+    }
+    else if(health >= 40){
+        status = "🟡 Sideways";
+    }
+
+    statusEl.innerText = status;
+
+    console.log("Health =", health);
+}
     
 
 }
