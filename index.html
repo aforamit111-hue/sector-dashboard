@@ -45,6 +45,11 @@
         onclick="openTab('screenerTab')">
         Screener
     </button>
+    
+    <button class="tab-btn"
+        onclick="openTab('portfolioTab')">
+        Portfolio
+        </button>
 
     <button class="tab-btn"
         onclick="openTab('journalTab')">
@@ -373,6 +378,75 @@ No stocks added
 </thead>
 
 <tbody id="sectorTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- ========================= -->
+<!-- PORTFOLIO -->
+<!-- ========================= -->
+
+<div id="portfolioTab"
+class="tab-content">
+
+<h2>Portfolio Tracker</h2>
+
+<div class="journal-form">
+
+<input
+id="portfolioSymbol"
+placeholder="Symbol">
+
+<input
+id="portfolioQty"
+type="number"
+placeholder="Quantity">
+
+<input
+id="portfolioBuy"
+type="number"
+placeholder="Buy Price">
+
+<button onclick="addPortfolio()">
+
+Add Holding
+
+</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symbol</th>
+
+<th>Qty</th>
+
+<th>Buy Price</th>
+
+<th>Current Price</th>
+
+<th>Investment</th>
+
+<th>Current Value</th>
+
+<th>P&L</th>
+
+<th>P&L %</th>
+
+<th>Delete</th>
+
+</tr>
+
+</thead>
+
+<tbody id="portfolioBody">
 
 </tbody>
 
