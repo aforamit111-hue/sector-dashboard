@@ -1170,7 +1170,7 @@ html += `
 
 <td>${stock.symbol}</td>
 
-<td>BUY</td>
+<td>${getOptionSignal(stock)}</td>
 
 <td>${entry}</td>
 
@@ -1180,7 +1180,9 @@ html += `
 
 <td>1:2</td>
 
-<td>${stock.score}%</td>
+<td>
+${getQuality(stock.score)}
+</td>
 
 <td>
 
@@ -1228,5 +1230,48 @@ SL: ${sl}
 Target: ${target}`
 
 );
+
+}
+// =====================================
+// OPTION SIGNAL ENGINE
+// =====================================
+
+function getOptionSignal(stock){
+
+const score =
+Number(stock.score || 0);
+
+const rsi =
+Number(stock.rsi || 50);
+
+if(
+score >= 80 &&
+rsi >= 60
+){
+return "🟢 BUY CE";
+}
+
+if(
+score < 50 &&
+rsi <= 40
+){
+return "🔴 BUY PE";
+}
+
+return "🟡 AVOID";
+
+}
+function getQuality(score){
+
+if(score >= 90)
+return "★★★★★";
+
+if(score >= 80)
+return "★★★★☆";
+
+if(score >= 70)
+return "★★★☆☆";
+
+return "★★☆☆☆";
 
 }
