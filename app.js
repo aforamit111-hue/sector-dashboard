@@ -1275,3 +1275,18 @@ return "★★★☆☆";
 return "★★☆☆☆";
 
 }
+// =====================================
+// ACTIVE TRADES
+// =====================================
+
+let activeTrades = JSON.parse(
+
+localStorage.getItem(
+"activeTrades"
+)
+
+||
+
+"[]"
+
+);
