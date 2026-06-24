@@ -607,45 +607,24 @@ document.body
 function openTab(tabId){
 
 document
-.querySelectorAll(
-".tab-content"
-)
+.querySelectorAll(".tab-content")
 .forEach(tab=>{
 
-tab.classList
-.remove(
-"active"
-);
+tab.classList.remove("active");
 
 });
 
 document
-.getElementById(
-tabId
-)
-.classList
-.add(
-"active"
-);
-
-document
-.querySelectorAll(
-".tab-btn"
-)
+.querySelectorAll(".tab-btn")
 .forEach(btn=>{
 
-btn.classList
-.remove(
-"active"
-);
+btn.classList.remove("active");
 
 });
 
-event.target
-.classList
-.add(
-"active"
-);
+document
+.getElementById(tabId)
+.classList.add("active");
 
 }
 // =====================================
@@ -1249,8 +1228,6 @@ activeTrades
 renderActiveTrades();
 
 }
-
-}
 // =====================================
 // OPTION SIGNAL ENGINE
 // =====================================
@@ -1309,21 +1286,7 @@ localStorage.getItem(
 "[]"
 
 );
-// =====================================
-// ACTIVE TRADES
-// =====================================
 
-let activeTrades = JSON.parse(
-
-localStorage.getItem(
-"activeTrades"
-)
-
-||
-
-"[]"
-
-);
 function renderActiveTrades(){
 
 const body =
