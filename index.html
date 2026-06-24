@@ -74,6 +74,11 @@ CRUDE
     </button>
 
     <button class="tab-btn"
+        onclick="openTab('optionsDeskTab')">
+        ⚡ Options Trade Desk
+    </button>
+
+    <button class="tab-btn"
         onclick="openTab('screenerTab')">
         Screener
     </button>
@@ -525,6 +530,71 @@ Generate Today's Picks
 </thead>
 
 <tbody id="recommendationBody">
+
+</tbody>
+
+</table>
+
+</div>
+<div id="optionsDeskTab"
+class="tab-content">
+
+<h2>⚡ Options Trade Desk</h2>
+
+<div class="card-grid">
+
+<div class="summary-card">
+<h3>Market Bias</h3>
+<h1 id="marketBias">
+Loading...
+</h1>
+</div>
+
+<div class="summary-card">
+<h3>Confidence</h3>
+<h1 id="marketConfidence">
+0%
+</h1>
+</div>
+
+<div class="summary-card">
+<h3>India VIX</h3>
+<h1 id="vixValue">
+--
+</h1>
+</div>
+
+<div class="summary-card">
+<h3>Best Trade</h3>
+<h1 id="bestTrade">
+--
+</h1>
+</div>
+
+</div>
+
+<h3>Generated Trade Setups</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Symbol</th>
+<th>Signal</th>
+<th>Entry</th>
+<th>SL</th>
+<th>Target</th>
+<th>RR</th>
+<th>Quality</th>
+<th>Approve</th>
+
+</tr>
+
+</thead>
+
+<tbody id="optionsDeskBody">
 
 </tbody>
 
