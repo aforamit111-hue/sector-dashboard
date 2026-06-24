@@ -35,6 +35,8 @@ fetch("stocks.json")
 
     renderRecommendations();
 
+    buildOptionsDesk();
+
     buildMarketHealth();
 
     loadMarketData();
@@ -1096,5 +1098,135 @@ document.getElementById(
 ).innerHTML =
 
 "🛢️ CRUDE<br>68.45<br>+0.82%";
+
+}
+// =====================================
+// OPTIONS TRADE DESK
+// =====================================
+
+function buildOptionsDesk(){
+
+const body =
+document.getElementById(
+"optionsDeskBody"
+);
+
+if(!body) return;
+
+const candidates =
+
+[...allStocks]
+
+.filter(
+
+x=>
+
+x.score >= 80 ||
+
+x.btst_candidate ||
+
+x.swing_candidate
+
+)
+
+.sort(
+
+(a,b)=>
+
+b.score-a.score
+
+)
+
+.slice(0,10);
+
+let html='';
+
+candidates.forEach(stock=>{
+
+const entry =
+Number(
+stock.price || 0
+);
+
+const atr =
+Number(
+stock.atr || 0
+);
+
+const sl =
+(entry - atr)
+.toFixed(2);
+
+const target =
+(
+entry +
+(atr * 2)
+)
+.toFixed(2);
+
+html += `
+
+<tr>
+
+<td>${stock.symbol}</td>
+
+<td>BUY</td>
+
+<td>${entry}</td>
+
+<td>${sl}</td>
+
+<td>${target}</td>
+
+<td>1:2</td>
+
+<td>${stock.score}%</td>
+
+<td>
+
+<button
+onclick="approveTrade(
+'${stock.symbol}',
+${entry},
+${sl},
+${target}
+)">
+
+🚀
+
+</button>
+
+</td>
+
+</tr>
+
+`;
+
+});
+
+body.innerHTML =
+html;
+
+}
+function approveTrade(
+symbol,
+entry,
+sl,
+target
+){
+
+alert(
+
+`Trade Approved
+
+${symbol}
+
+Entry: ${entry}
+
+SL: ${sl}
+
+Target: ${target}`
+
+);
 
 }
