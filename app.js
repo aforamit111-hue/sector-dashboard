@@ -43,6 +43,8 @@ fetch("stocks.json")
 
     loadMarketData();
 
+    loadNewsAI();
+
 })
 .catch(err => {
 
@@ -1415,5 +1417,157 @@ activeTrades
 );
 
 renderActiveTrades();
+
+}
+// =====================================
+// NEWS & SENTIMENT AI
+// =====================================
+
+function loadNewsAI(){
+
+const news = [
+
+{
+
+title:
+"FII Buys ₹3500 Cr",
+
+impact:
+"Positive",
+
+explanation:
+"Institutions are buying equities aggressively.",
+
+consequence:
+"Large Cap and Banking stocks may outperform.",
+
+trade:
+"BUY CE"
+
+},
+
+{
+
+title:
+"Crude Oil Rises 4%",
+
+impact:
+"Negative",
+
+explanation:
+"Higher energy costs increase inflation pressure.",
+
+consequence:
+"Aviation and Paint sectors may underperform.",
+
+trade:
+"BUY PE"
+
+},
+
+{
+
+title:
+"US Markets Close Strong",
+
+impact:
+"Positive",
+
+explanation:
+"Positive global sentiment supports risk assets.",
+
+consequence:
+"NIFTY opening may remain positive.",
+
+trade:
+"BUY CE"
+
+}
+
+];
+
+renderNews(news);
+
+}
+function renderNews(news){
+
+const container =
+
+document.getElementById(
+"newsContainer"
+);
+
+if(!container)
+return;
+
+let html='';
+
+news.forEach(item=>{
+
+html += `
+
+<div class="panel">
+
+<h3>
+
+${item.title}
+
+</h3>
+
+<p>
+
+<b>Impact:</b>
+
+${item.impact}
+
+</p>
+
+<p>
+
+<b>Explanation:</b>
+
+${item.explanation}
+
+</p>
+
+<p>
+
+<b>Consequences:</b>
+
+${item.consequence}
+
+</p>
+
+<p>
+
+<b>Suggested Trade:</b>
+
+${item.trade}
+
+</p>
+
+</div>
+
+`;
+
+});
+
+container.innerHTML =
+html;
+
+document.getElementById(
+"marketMood"
+).innerText =
+"🟢 Bullish";
+
+document.getElementById(
+"newsBias"
+).innerText =
+"Positive";
+
+document.getElementById(
+"newsTrade"
+).innerText =
+"BUY CE";
 
 }
