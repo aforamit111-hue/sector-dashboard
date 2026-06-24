@@ -46,6 +46,8 @@ fetch("stocks.json")
 
     buildMarketHealth();
 
+    buildForecastEngine();
+
     loadMarketData();
 
     loadNewsAI();
@@ -1536,5 +1538,115 @@ document.getElementById(
 "newsTrade"
 ).innerText =
 "BUY CE";
+
+}
+// =====================================
+// MARKET FORECAST ENGINE
+// =====================================
+
+function buildForecastEngine(){
+
+if(allStocks.length === 0){
+return;
+}
+
+const bullishStocks =
+
+allStocks.filter(
+x => x.score >= 80
+).length;
+
+const bullishPercent =
+
+Math.round(
+(bullishStocks / allStocks.length)
+* 100
+);
+
+let direction =
+"🟡 Sideways";
+
+if(bullishPercent >= 60){
+direction =
+"🟢 Bullish";
+}
+else if(bullishPercent <= 40){
+direction =
+"🔴 Bearish";
+}
+
+const forecastEl =
+document.getElementById(
+"forecastDirection"
+);
+
+const confidenceEl =
+document.getElementById(
+"forecastConfidence"
+);
+
+if(forecastEl){
+forecastEl.innerText =
+direction;
+}
+
+if(confidenceEl){
+confidenceEl.innerText =
+"Confidence: "
++
+bullishPercent
++
+"%";
+}
+
+}
+
+// =====================================
+// TRADE SUGGESTION ENGINE
+// =====================================
+
+function buildTradeSuggestion(
+score
+){
+
+const tradeEl =
+document.getElementById(
+"suggestedTrade"
+);
+
+const confEl =
+document.getElementById(
+"tradeConfidence"
+);
+
+if(!tradeEl || !confEl){
+return;
+}
+
+let trade =
+"🟡 AVOID";
+
+if(score >= 60){
+
+trade =
+"🟢 BUY CE";
+
+}
+else if(score <= 40){
+
+trade =
+"🔴 BUY PE";
+
+}
+
+tradeEl.innerText =
+trade;
+
+confEl.innerText =
+"Confidence: "
++
+score
++
+"%";
 
 }
