@@ -37,6 +37,8 @@ fetch("stocks.json")
 
     buildOptionsDesk();
 
+    renderActiveTrades();
+
     buildMarketHealth();
 
     loadMarketData();
@@ -1217,19 +1219,34 @@ sl,
 target
 ){
 
-alert(
+activeTrades.push({
 
-`Trade Approved
+symbol,
 
-${symbol}
+entry,
 
-Entry: ${entry}
+sl,
 
-SL: ${sl}
+target,
 
-Target: ${target}`
+status:
+"ACTIVE"
+
+});
+
+localStorage.setItem(
+
+"activeTrades",
+
+JSON.stringify(
+activeTrades
+)
 
 );
+
+renderActiveTrades();
+
+}
 
 }
 // =====================================
@@ -1290,3 +1307,113 @@ localStorage.getItem(
 "[]"
 
 );
+// =====================================
+// ACTIVE TRADES
+// =====================================
+
+let activeTrades = JSON.parse(
+
+localStorage.getItem(
+"activeTrades"
+)
+
+||
+
+"[]"
+
+);
+function renderActiveTrades(){
+
+const body =
+
+document.getElementById(
+"activeTradesBody"
+);
+
+if(!body)
+return;
+
+let html='';
+
+activeTrades.forEach(
+
+(trade,index)=>{
+
+const stock =
+
+allStocks.find(
+
+x=>
+
+x.symbol===trade.symbol
+
+);
+
+const current =
+
+stock
+? stock.price
+: trade.entry;
+
+const pnl =
+
+(
+current -
+trade.entry
+).toFixed(2);
+
+html += `
+
+<tr>
+
+<td>${trade.symbol}</td>
+
+<td>${trade.entry}</td>
+
+<td>${current}</td>
+
+<td>${pnl}</td>
+
+<td>${trade.status}</td>
+
+<td>
+
+<button
+onclick="exitTrade(${index})">
+
+❌
+
+</button>
+
+</td>
+
+</tr>
+
+`;
+
+});
+
+body.innerHTML =
+html;
+
+}
+function exitTrade(index){
+
+activeTrades.splice(
+index,
+1
+);
+
+localStorage.setItem(
+
+"activeTrades",
+
+JSON.stringify(
+activeTrades
+)
+
+);
+
+renderActiveTrades();
+
+}
