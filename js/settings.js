@@ -20,9 +20,11 @@ const DEFAULT_SETTINGS = {
 
     minScore: 80,
 
-    minVolumeRatio: 1.0,
+    minVolumeRatio: 1.2,
 
-    maxSectorStocks: 2
+    maxSectorStocks: 2,
+
+    maxRiskPercent: 2
 
 };
 
