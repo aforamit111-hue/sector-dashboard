@@ -1,29 +1,28 @@
 // =====================================
-// AI BASKET BUILDER V1
+// TRADEPILOT PRO X
+// AI BASKET BUILDER V3
+// CORE ENGINE
 // =====================================
-// =====================================
-// CONVICTION SCORE ENGINE
-// =====================================
+
+// =============================
+// CONVICTION SCORE
+// =============================
 
 function getConvictionScore(stock){
 
-    let score = 0;
+    let score = stock.score || 0;
 
-    // Scanner Score (0–60)
-    score += (stock.score || 0) * 0.6;
+    score += Math.min(
+        (stock.volume_ratio || 0) * 5,
+        10
+    );
 
-    // Volume Ratio (0–15)
-    score += Math.min((stock.volume_ratio || 0) * 10, 15);
-
-    // BTST
     if(stock.btst_candidate)
         score += 10;
 
-    // Swing
     if(stock.swing_candidate)
         score += 8;
 
-    // Hilega
     if(stock.hilega_milega)
         score += 7;
 
@@ -31,13 +30,15 @@ function getConvictionScore(stock){
 
 }
 
-// =====================================
-// AI STOCK SELECTION ENGINE
-// =====================================
+// =============================
+// STOCK SELECTION
+// =============================
 
 function selectBasketStocks(){
 
-    let sectorCount = {};
+    const sectorCount = {};
+
+    const basket = [];
 
     const filtered =
 
@@ -55,11 +56,29 @@ function selectBasketStocks(){
 
     })
 
-    .sort((a,b)=>b.score-a.score);
+    .sort(
 
-    const basket=[];
+        (a,b)=>
+
+        getConvictionScore(b)
+
+        -
+
+        getConvictionScore(a)
+
+    );
 
     filtered.forEach(stock=>{
+
+        if(
+
+            basket.length >=
+
+            settings.basketSize
+
+        )
+
+        return;
 
         const sector = stock.sector;
 
@@ -67,17 +86,19 @@ function selectBasketStocks(){
 
             sectorCount[sector]=0;
 
-        if(sectorCount[sector] >= settings.maxSectorStocks)
+        if(
 
-            return;
+            sectorCount[sector] >=
+
+            settings.maxSectorStocks
+
+        )
+
+        return;
 
         basket.push(stock);
 
         sectorCount[sector]++;
-
-        if(basket.length >= settings.basketSize)
-
-            return;
 
     });
 
@@ -85,57 +106,143 @@ function selectBasketStocks(){
 
 }
 
+// =============================
+// SMART ALLOCATION
+// =============================
+
+function calculateAllocation(stocks){
+
+    const buyingPower =
+
+        settings.capital *
+
+        settings.leverage;
+
+    const total =
+
+        stocks.reduce(
+
+            (sum,s)=>
+
+            sum +
+
+            getConvictionScore(s),
+
+            0
+
+        );
+
+    return stocks.map(stock=>{
+
+        const conviction =
+
+            getConvictionScore(stock);
+
+        const allocation =
+
+            buyingPower *
+
+            conviction /
+
+            total;
+
+        return{
+
+            stock,
+
+            conviction,
+
+            allocation
+
+        };
+
+    });
+
+}
+
+// =============================
+// TRADE PLAN
+// =============================
+
+function buildTradePlan(
+
+    stock,
+
+    allocation
+
+){
+
+    const entry =
+
+    Number(stock.price || 0);
+
+    const atr =
+
+    Number(stock.atr || 0);
+
+    const qty =
+
+    Math.floor(
+
+        allocation /
+
+        entry
+
+    );
+
+    const investment =
+
+    qty *
+
+    entry;
+
+    const stopLoss =
+
+    entry - atr;
+
+    const target =
+
+    entry + (atr * 2);
+
+    return{
+
+        qty,
+
+        investment,
+
+        entry,
+
+        stopLoss,
+
+        target,
+
+        rr:"1 : 2",
+
+        holding:"3-7 Days"
+
+    };
+
+}
+
+// =====================================
+// GENERATE AI BASKET
+// =====================================
+
 function generateBasket(){
 
     const body = document.getElementById("basketBody");
 
     if(!body) return;
 
-    // Read settings
-    const capital = settings.capital;
-    const leverage = settings.leverage;
-    const basketSize = settings.basketSize;
-
-    const buyingPower = capital * leverage;
-
-    // Filter good stocks
     const candidates = selectBasketStocks();
-    if(candidates.length===0){
-
-        body.innerHTML=
-
-`.      <tr>
-
-        <td colspan="10">
-
-        No Basket Found
-
-        </td>
-
-        </tr>`;
-
-        return;
-
-    }
-
-        .filter(stock =>
-
-            stock.score >= settings.minScore &&
-            (stock.volume_ratio || 0) >= settings.minVolumeRatio
-
-        )
-
-        .sort((a,b)=>b.score-a.score)
-
-        .slice(0,basketSize);
 
     if(candidates.length===0){
 
         body.innerHTML=`
         <tr>
-        <td colspan="9">
-        No stocks found.
-        </td>
+            <td colspan="11">
+                No Basket Found
+            </td>
         </tr>
         `;
 
@@ -143,57 +250,44 @@ function generateBasket(){
 
     }
 
+    const basket = calculateAllocation(candidates);
 
     let html="";
 
-    const basket =
-calculateAllocation(candidates);
+    basket.forEach((item,index)=>{
 
-basket.forEach((item,index)=>{
+        const stock = item.stock;
 
-    const stock =
-    item.stock;
-
-    const allocation =
-    item.allocation;
-
-    const trade =
-    buildTradePlan(
-    stock,
-    allocation
-    );(stock,index)=>{
-
-        const qty = Math.floor(
-            allocation /
-            stock.price
+        const trade = buildTradePlan(
+            stock,
+            item.allocation
         );
-
-        const investment =
-        qty * stock.price;
 
         html += `
 
         <tr>
 
-        <td>${index+1}</td>
+            <td>${index+1}</td>
 
-        <td>${stock.symbol}</td>
+            <td>${stock.symbol}</td>
 
-        <td>${stock.sector}</td>
+            <td>${stock.sector}</td>
 
-        <td>${stock.score}</td>
+            <td>${stock.score}</td>
 
-        <td>${item.conviction}</td>
+            <td>${item.conviction}</td>
 
-        <td>
-        ₹$     
-      {Math.round(allocation).toLocaleString()}
+            <td>₹${Math.round(item.allocation).toLocaleString()}</td>
 
-       </td>
+            <td>${trade.qty}</td>
 
-        <td>${qty}</td>
+            <td>₹${trade.entry.toFixed(2)}</td>
 
-        <td>₹${investment.toFixed(0)}</td>
+            <td>₹${trade.stopLoss.toFixed(2)}</td>
+
+            <td>₹${trade.target.toFixed(2)}</td>
+
+            <td>${trade.rr}</td>
 
         </tr>
 
@@ -202,6 +296,8 @@ basket.forEach((item,index)=>{
     });
 
     body.innerHTML = html;
+
+    refreshBasketCards();
 
 }
 // =====================================
