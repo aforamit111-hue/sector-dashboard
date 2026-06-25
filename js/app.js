@@ -52,6 +52,8 @@ fetch("stocks.json")
 
     loadNewsAI();
 
+    renderSettings();
+
     buildAIStatus();
 
 })
