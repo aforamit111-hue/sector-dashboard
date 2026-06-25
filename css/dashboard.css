@@ -1,1 +1,49 @@
-ff
+/* ===========================
+   AI STATUS BAR
+=========================== */
+
+.ai-status{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:15px;
+
+margin:20px 0;
+
+}
+
+.ai-card{
+
+background:#1e293b;
+
+color:white;
+
+padding:20px;
+
+border-radius:12px;
+
+text-align:center;
+
+box-shadow:0 4px 10px rgba(0,0,0,.25);
+
+}
+
+.ai-card h4{
+
+margin-bottom:10px;
+
+font-size:16px;
+
+color:#cbd5e1;
+
+}
+
+.ai-card h2{
+
+font-size:26px;
+
+margin:0;
+
+}
