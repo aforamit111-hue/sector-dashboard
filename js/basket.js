@@ -1,6 +1,59 @@
 // =====================================
 // AI BASKET BUILDER V1
 // =====================================
+// =====================================
+// AI STOCK SELECTION ENGINE
+// =====================================
+
+function selectBasketStocks(){
+
+    let sectorCount = {};
+
+    const filtered =
+
+    [...allStocks]
+
+    .filter(stock=>{
+
+        return(
+
+            stock.score >= settings.minScore &&
+
+            (stock.volume_ratio || 0) >= settings.minVolumeRatio
+
+        );
+
+    })
+
+    .sort((a,b)=>b.score-a.score);
+
+    const basket=[];
+
+    filtered.forEach(stock=>{
+
+        const sector = stock.sector;
+
+        if(!sectorCount[sector])
+
+            sectorCount[sector]=0;
+
+        if(sectorCount[sector] >= settings.maxSectorStocks)
+
+            return;
+
+        basket.push(stock);
+
+        sectorCount[sector]++;
+
+        if(basket.length >= settings.basketSize)
+
+            return;
+
+    });
+
+    return basket;
+
+}
 
 function generateBasket(){
 
