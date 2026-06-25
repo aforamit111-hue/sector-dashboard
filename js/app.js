@@ -1607,6 +1607,49 @@ bullishPercent
 
 }
 
+AIEngine.marketHealth =
+parseInt(
+document.getElementById(
+"marketHealth"
+).innerText);
+
+AIEngine.forecast =
+document
+.getElementById(
+"forecastDirection"
+)
+.innerText
+.includes("Bullish")
+
+?
+
+"BULLISH"
+
+:
+
+document
+.getElementById(
+"forecastDirection"
+)
+.innerText
+.includes("Bearish")
+
+?
+
+"BEARISH"
+
+:
+
+"SIDEWAYS";
+
+AIEngine.newsBias =
+"POSITIVE";
+
+AIEngine.risk =
+"LOW";
+
+AIEngine.calculate();
+
 // =====================================
 // TRADE SUGGESTION ENGINE
 // =====================================
