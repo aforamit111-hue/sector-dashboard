@@ -2,6 +2,36 @@
 // AI BASKET BUILDER V1
 // =====================================
 // =====================================
+// CONVICTION SCORE ENGINE
+// =====================================
+
+function getConvictionScore(stock){
+
+    let score = 0;
+
+    // Scanner Score (0–60)
+    score += (stock.score || 0) * 0.6;
+
+    // Volume Ratio (0–15)
+    score += Math.min((stock.volume_ratio || 0) * 10, 15);
+
+    // BTST
+    if(stock.btst_candidate)
+        score += 10;
+
+    // Swing
+    if(stock.swing_candidate)
+        score += 8;
+
+    // Hilega
+    if(stock.hilega_milega)
+        score += 7;
+
+    return Math.round(score);
+
+}
+
+// =====================================
 // AI STOCK SELECTION ENGINE
 // =====================================
 
@@ -69,7 +99,24 @@ function generateBasket(){
     const buyingPower = capital * leverage;
 
     // Filter good stocks
-    const candidates = [...allStocks]
+    const candidates = selectBasketStocks();
+    if(candidates.length===0){
+
+        body.innerHTML=
+
+`.      <tr>
+
+        <td colspan="10">
+
+        No Basket Found
+
+        </td>
+
+        </tr>`;
+
+        return;
+
+    }
 
         .filter(stock =>
 
@@ -96,13 +143,28 @@ function generateBasket(){
 
     }
 
-    const allocation =
-    buyingPower /
-    candidates.length;
 
     let html="";
 
-    candidates.forEach((stock,index)=>{
+    const basket =
+calculateAllocation(candidates);
+
+basket.forEach((item,index)=>{
+
+    const stock =
+    item.stock;
+
+    const allocation =
+    item.allocation;
+
+    const qty =
+    Math.floor(
+        allocation /
+        stock.price
+    );
+
+    const investment =
+    qty * stock.price;(stock,index)=>{
 
         const qty = Math.floor(
             allocation /
@@ -124,7 +186,13 @@ function generateBasket(){
 
         <td>${stock.score}</td>
 
-        <td>₹${allocation.toFixed(0)}</td>
+        <td>${item.conviction}</td>
+
+        <td>
+        ₹$     
+      {Math.round(allocation).toLocaleString()}
+
+       </td>
 
         <td>${qty}</td>
 
@@ -180,5 +248,73 @@ document.getElementById(
 settings.capital *
 settings.leverage
 ).toLocaleString();
+
+}
+
+// =====================================
+// SMART ALLOCATION ENGINE
+// =====================================
+
+function calculateAllocation(stocks){
+
+    const buyingPower =
+    settings.capital *
+    settings.leverage;
+
+    const totalConviction =
+    stocks.reduce(
+        (sum, stock)=>sum + getConvictionScore(stock),
+        0
+    );
+
+    return stocks.map(stock=>{
+
+        const conviction =
+        getConvictionScore(stock);
+
+        const allocation =
+        buyingPower *
+        (conviction / totalConviction);
+
+        return{
+
+            stock,
+
+            conviction,
+
+            allocation
+
+        };
+
+    });
+
+}
+// =====================================
+// BASKET QUALITY
+// =====================================
+
+function basketQuality(stocks){
+
+    if(stocks.length===0)
+
+        return 0;
+
+    let total =
+
+    stocks.reduce(
+
+        (a,b)=>a+b.score,
+
+        0
+
+    );
+
+    return (
+
+        total /
+
+        stocks.length
+
+    ).toFixed(2);
 
 }
