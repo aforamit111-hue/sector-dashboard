@@ -54,6 +54,8 @@ fetch("stocks.json")
 
     renderSettings();
 
+    refreshBasketCards();
+
     buildAIStatus();
 
 })
