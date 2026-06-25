@@ -4,113 +4,86 @@
 
 function generateBasket(){
 
-const body =
-document.getElementById(
-"basketBody"
-);
+    const body = document.getElementById("basketBody");
 
-if(!body) return;
+    if(!body) return;
 
-const candidates =
+    // Read settings
+    const capital = settings.capital;
+    const leverage = settings.leverage;
+    const basketSize = settings.basketSize;
 
-[...allStocks]
+    const buyingPower = capital * leverage;
 
-.filter(stock=>{
+    // Filter good stocks
+    const candidates = [...allStocks]
 
-return (
+        .filter(stock =>
 
-stock.score>=80 &&
+            stock.score >= settings.minScore &&
+            (stock.volume_ratio || 0) >= settings.minVolumeRatio
 
-(stock.volume_ratio || 0)>=1 &&
+        )
 
-(stock.price || 0)>100
+        .sort((a,b)=>b.score-a.score)
 
-);
+        .slice(0,basketSize);
 
-})
+    if(candidates.length===0){
 
-.sort((a,b)=>{
+        body.innerHTML=`
+        <tr>
+        <td colspan="9">
+        No stocks found.
+        </td>
+        </tr>
+        `;
 
-return getConviction(b)-getConviction(a);
+        return;
 
-})
+    }
 
-.slice(0,7);
-const allocation =
+    const allocation =
+    buyingPower /
+    candidates.length;
 
-150000 /
-candidates.length;
+    let html="";
 
-let html='';
+    candidates.forEach((stock,index)=>{
 
-candidates.forEach(
+        const qty = Math.floor(
+            allocation /
+            stock.price
+        );
 
-(stock,index)=>{
+        const investment =
+        qty * stock.price;
 
-const qty =
+        html += `
 
-Math.floor(
+        <tr>
 
-allocation/
+        <td>${index+1}</td>
 
-stock.price
+        <td>${stock.symbol}</td>
 
-);
+        <td>${stock.sector}</td>
 
-const conviction = getConviction(stock);
+        <td>${stock.score}</td>
 
-const stars =
-conviction >= 95 ? "★★★★★" :
-conviction >= 90 ? "★★★★☆" :
-conviction >= 85 ? "★★★☆☆" :
-"★★☆☆☆";
+        <td>₹${allocation.toFixed(0)}</td>
 
-html += `
+        <td>${qty}</td>
 
-<tr>
+        <td>₹${investment.toFixed(0)}</td>
 
-<td>${index + 1}</td>
+        </tr>
 
-<td>${stock.symbol}</td>
+        `;
 
-<td>${stock.sector}</td>
+    });
 
-<td>${stock.score}</td>
-
-<td>${stars}</td>
-
-<td>${conviction}</td>
-
-<td>₹${allocation.toFixed(0)}</td>
-
-<td>${qty}</td>
-
-</tr>
-
-`; `
-
-<tr>
-
-<td>${index+1}</td>
-
-<td>${stock.symbol}</td>
-
-<td>${stock.sector}</td>
-
-<td>${stock.score}</td>
-
-<td>₹${allocation.toFixed(0)}</td>
-
-<td>${qty}</td>
-
-</tr>
-
-`;
-
-});
-
-body.innerHTML =
-html;
+    body.innerHTML = html;
 
 }
 // =====================================
