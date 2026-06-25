@@ -157,14 +157,11 @@ basket.forEach((item,index)=>{
     const allocation =
     item.allocation;
 
-    const qty =
-    Math.floor(
-        allocation /
-        stock.price
-    );
-
-    const investment =
-    qty * stock.price;(stock,index)=>{
+    const trade =
+    buildTradePlan(
+    stock,
+    allocation
+    );(stock,index)=>{
 
         const qty = Math.floor(
             allocation /
@@ -287,6 +284,52 @@ function calculateAllocation(stocks){
         };
 
     });
+
+}
+
+// =====================================
+// TRADE PLAN ENGINE
+// =====================================
+
+function buildTradePlan(stock, allocation){
+
+    const entry = Number(stock.price || 0);
+
+    const atr = Number(stock.atr || 0);
+
+    const qty = Math.floor(allocation / entry);
+
+    const investment = qty * entry;
+
+    const stopLoss = (entry - atr).toFixed(2);
+
+    const target = (entry + atr * 2).toFixed(2);
+
+    const maxLoss = ((entry - stopLoss) * qty).toFixed(2);
+
+    const expectedProfit = ((target - entry) * qty).toFixed(2);
+
+    return{
+
+        qty,
+
+        investment,
+
+        entry,
+
+        stopLoss,
+
+        target,
+
+        maxLoss,
+
+        expectedProfit,
+
+        rr:"1 : 2",
+
+        holding:"3-7 Days"
+
+    };
 
 }
 // =====================================
