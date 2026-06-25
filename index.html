@@ -115,6 +115,13 @@ Version 10.0
         onclick="openTab('portfolioTab')">
         Portfolio
         </button>
+    
+    <button class="tab-btn"
+        onclick="openTab('settingsTab')">
+
+        ⚙ Settings
+
+    </button>
 
     <button class="tab-btn"
         onclick="openTab('journalTab')">
@@ -640,6 +647,63 @@ Click Generate Basket
 </tbody>
 
 </table>
+
+</div>
+
+<div id="settingsTab"
+class="tab-content">
+
+<h2>
+
+⚙ Trading Settings
+
+</h2>
+
+<div class="journal-form">
+
+<input
+id="setCapital"
+type="number"
+placeholder="Capital">
+
+<input
+id="setLeverage"
+type="number"
+placeholder="Leverage">
+
+<input
+id="setBasket"
+type="number"
+placeholder="Basket Size">
+
+<input
+id="setTarget"
+type="number"
+placeholder="Target %">
+
+<input
+id="setSL"
+type="number"
+placeholder="Stop Loss %">
+
+<input
+id="setHolding"
+type="number"
+placeholder="Holding Days">
+
+<button onclick="updateSettings()">
+
+💾 Save
+
+</button>
+
+<button onclick="resetSettings()">
+
+Reset
+
+</button>
+
+</div>
 
 </div>
 <!-- ========================= -->
