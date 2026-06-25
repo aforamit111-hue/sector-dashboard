@@ -15,22 +15,27 @@ const candidates =
 
 [...allStocks]
 
-.filter(x=>
+.filter(stock=>{
 
-x.score>=80
+return (
 
-)
+stock.score>=80 &&
 
-.sort(
+(stock.volume_ratio || 0)>=1 &&
 
-(a,b)=>
+(stock.price || 0)>100
 
-b.score-a.score
+);
 
-)
+})
+
+.sort((a,b)=>{
+
+return getConviction(b)-getConviction(a);
+
+})
 
 .slice(0,7);
-
 const allocation =
 
 150000 /
@@ -76,5 +81,30 @@ html += `
 
 body.innerHTML =
 html;
+
+}
+// =====================================
+// AI CONVICTION SCORE
+// =====================================
+
+function getConviction(stock){
+
+let score = 0;
+
+score += stock.score || 0;
+
+if((stock.volume_ratio||0)>=1.5)
+score += 5;
+
+if(stock.btst_candidate)
+score += 5;
+
+if(stock.swing_candidate)
+score += 5;
+
+if(stock.hilega_milega)
+score += 5;
+
+return score;
 
 }
