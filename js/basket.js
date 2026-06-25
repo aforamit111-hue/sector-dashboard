@@ -297,6 +297,8 @@ function generateBasket(){
 
     body.innerHTML = html;
 
+    updateBasketSummary(basket);
+
     refreshBasketCards();
 
 }
@@ -455,5 +457,89 @@ function basketQuality(stocks){
         stocks.length
 
     ).toFixed(2);
+
+}
+// =====================================
+// UPDATE BASKET SUMMARY
+// =====================================
+
+function updateBasketSummary(basket){
+
+    let investment = 0;
+    let profit = 0;
+    let loss = 0;
+    let quality = 0;
+
+    basket.forEach(item=>{
+
+        const trade =
+        buildTradePlan(
+            item.stock,
+            item.allocation
+        );
+
+        investment += trade.investment;
+
+        profit +=
+        (trade.target - trade.entry) *
+        trade.qty;
+
+        loss +=
+        (trade.entry - trade.stopLoss) *
+        trade.qty;
+
+        quality += item.conviction;
+
+    });
+
+    quality =
+    Math.round(
+        quality /
+        basket.length
+    );
+
+    document.getElementById(
+        "basketInvestment"
+    ).innerText =
+    "₹"+investment.toLocaleString();
+
+    document.getElementById(
+        "basketProfit"
+    ).innerText =
+    "₹"+Math.round(profit).toLocaleString();
+
+    document.getElementById(
+        "basketLoss"
+    ).innerText =
+    "₹"+Math.round(loss).toLocaleString();
+
+    document.getElementById(
+        "basketQuality"
+    ).innerText =
+    quality+"%";
+
+    let decision="WAIT";
+
+    if(quality>=90)
+        decision="🟢 STRONG BUY";
+
+    else if(quality>=80)
+        decision="🟢 BUY";
+
+    else if(quality>=70)
+        decision="🟡 HOLD";
+
+    else
+        decision="🔴 NO TRADE";
+
+    document.getElementById(
+        "basketDecision"
+    ).innerText =
+    decision;
+
+    document.getElementById(
+        "basketConfidence"
+    ).innerText =
+    quality+"%";
 
 }
