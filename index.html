@@ -103,6 +103,13 @@ Version 10.0
         onclick="openTab('screenerTab')">
         Screener
     </button>
+
+    <button class="tab-btn"
+        onclick="openTab('basketTab')">
+
+        📦 Basket Builder
+
+    </button>
     
     <button class="tab-btn"
         onclick="openTab('portfolioTab')">
@@ -551,7 +558,85 @@ No stocks added
 </table>
 
 </div>
+<!-- ========================= -->
+<!-- AI BASKET BUILDER -->
+<!-- ========================= -->
 
+<div id="basketTab" class="tab-content">
+
+<h2>📦 AI Basket Builder</h2>
+
+<div class="card-grid">
+
+<div class="summary-card">
+<h3>Capital</h3>
+<h1>₹50,000</h1>
+</div>
+
+<div class="summary-card">
+<h3>Buying Power</h3>
+<h1>₹1,50,000</h1>
+</div>
+
+<div class="summary-card">
+<h3>Max Stocks</h3>
+<h1>7</h1>
+</div>
+
+<div class="summary-card">
+<h3>Target</h3>
+<h1>3%</h1>
+</div>
+
+<div class="summary-card">
+<h3>Stop Loss</h3>
+<h1>2%</h1>
+</div>
+
+</div>
+
+<button
+onclick="generateBasket()"
+class="primary-btn">
+
+🚀 Generate AI Basket
+
+</button>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Rank</th>
+<th>Stock</th>
+<th>Sector</th>
+<th>Score</th>
+<th>Allocation</th>
+<th>Quantity</th>
+
+</tr>
+
+</thead>
+
+<tbody id="basketBody">
+
+<tr>
+
+<td colspan="6">
+
+Click Generate Basket
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
 <!-- ========================= -->
 <!-- PORTFOLIO -->
 <!-- ========================= -->
