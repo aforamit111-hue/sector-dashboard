@@ -57,7 +57,37 @@ stock.price
 
 );
 
+const conviction = getConviction(stock);
+
+const stars =
+conviction >= 95 ? "★★★★★" :
+conviction >= 90 ? "★★★★☆" :
+conviction >= 85 ? "★★★☆☆" :
+"★★☆☆☆";
+
 html += `
+
+<tr>
+
+<td>${index + 1}</td>
+
+<td>${stock.symbol}</td>
+
+<td>${stock.sector}</td>
+
+<td>${stock.score}</td>
+
+<td>${stars}</td>
+
+<td>${conviction}</td>
+
+<td>₹${allocation.toFixed(0)}</td>
+
+<td>${qty}</td>
+
+</tr>
+
+`; `
 
 <tr>
 
