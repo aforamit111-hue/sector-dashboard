@@ -111,3 +111,21 @@ score += 5;
 return score;
 
 }
+function refreshBasketCards(){
+
+document.getElementById(
+"basketCapital"
+).innerText =
+
+"₹"+settings.capital.toLocaleString();
+
+document.getElementById(
+"basketBuyingPower"
+).innerText =
+
+"₹"+(
+settings.capital *
+settings.leverage
+).toLocaleString();
+
+}
