@@ -85,6 +85,7 @@ function updateSettings(){
     Number(document.getElementById("setHolding").value);
 
     saveSettings();
+    refreshBasketCards();
 
     alert("Settings Saved Successfully");
 
