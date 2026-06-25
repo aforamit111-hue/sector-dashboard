@@ -52,6 +52,8 @@ fetch("stocks.json")
 
     loadNewsAI();
 
+    buildAIStatus();
+
 })
 .catch(err => {
 
@@ -1652,5 +1654,49 @@ confEl.innerText =
 score
 +
 "%";
+
+}
+// =====================================
+// AI STATUS PANEL
+// =====================================
+
+function buildAIStatus(){
+
+    const health =
+    Number(
+        document.getElementById("marketHealth")
+        ?.innerText
+        .replace("%","")
+    ) || 0;
+
+    let status = "WAIT";
+    let confidence = health;
+
+    if(health >= 60){
+
+        status = "🟢 READY";
+
+    }else if(health >= 40){
+
+        status = "🟡 CAUTION";
+
+    }else{
+
+        status = "🔴 NO TRADE";
+
+    }
+
+    document.getElementById("aiStatus").innerText = status;
+
+    document.getElementById("aiConfidence").innerText =
+    confidence + "%";
+
+    document.getElementById("aiAction").innerText =
+    document.getElementById("suggestedTrade").innerText;
+
+    document.getElementById("portfolioRisk").innerText =
+    health >= 60 ? "LOW" :
+    health >= 40 ? "MEDIUM" :
+    "HIGH";
 
 }
